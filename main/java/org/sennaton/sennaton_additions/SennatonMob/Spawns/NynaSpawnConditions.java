@@ -12,6 +12,8 @@ import net.minecraft.world.level.biome.Biome.Precipitation;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraftforge.common.Tags;
 import net.minecraft.data.worldgen.biome.BiomeData;
+import org.sennaton.sennaton_additions.Sennaton_Additions;
+import org.sennaton.sennaton_additions.Tags.CoolNether;
 
 import java.lang.reflect.Field;
 import java.util.Random;
@@ -38,7 +40,7 @@ public class NynaSpawnConditions {
 	}
 	public static boolean isHaunting(LevelAccessor world, double x, double y, double z){
 		BlockPos Pos = new BlockPos(BlockPos.containing(x, y, z));
-		return (world.getBiome(Pos).is(BiomeTags.IS_NETHER));
+		return (world.getBiome(Pos).is(org.sennaton.sennaton_additions.Tags.CoolNether.IS_COOL_NETHER));
 	}
 	public static boolean isEnd(LevelAccessor world, double x, double y, double z){
 		BlockPos Pos = new BlockPos(BlockPos.containing(x, y, z));

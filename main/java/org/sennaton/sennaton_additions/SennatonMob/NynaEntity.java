@@ -13,9 +13,11 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.animal.*;
 import net.minecraft.world.entity.projectile.ThrownPotion;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.Blocks;
 import org.sennaton.sennaton_additions.SennatonMob.Dice.*;
+import org.sennaton.sennaton_additions.SennatonMob.Spawns.NynaSpawnConditions;
 import org.sennaton.sennaton_additions.Sennaton_Additions;
 import software.bernie.geckolib.util.GeckoLibUtil;
 import software.bernie.geckolib.core.object.PlayState;
@@ -56,6 +58,8 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.core.BlockPos;
 
 import java.util.Random;
 
@@ -96,6 +100,10 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 		float f = p_34298_.getSpecialMultiplier();
 		this.setCanPickUpLoot(randomsource.nextFloat() < 0.55F * f);
 		variant = Util.getRandom(NynaVariant.values(), this.random);
+		Boolean isCold = NynaSpawnConditions.isCold( p_34297_,this.getX(),  this.getY(),  this.getZ());
+		Boolean isDark = NynaSpawnConditions.isDark( p_34297_,this.getX(),  this.getY(),  this.getZ());
+		Boolean isNether = NynaSpawnConditions.isNether( p_34297_,this.getX(),  this.getY(),  this.getZ());
+		Boolean isHaunting = NynaSpawnConditions.isHaunting( p_34297_,this.getX(),  this.getY(),  this.getZ());
 		setVariant(variant);
 
 
@@ -136,11 +144,11 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 	}
 
 	public boolean isInvulnerableTo(DamageSource pSource) {
-		return this.isRemoved() || this.isInvulnerable() && !pSource.is(DamageTypeTags.BYPASSES_INVULNERABILITY) && !pSource.isCreativePlayer() || (pSource.is(DamageTypeTags.IS_FIRE) && this.fireImmune()||this.fireytype()) || pSource.is(DamageTypeTags.IS_FALL) && this.getType().is(EntityTypeTags.FALL_DAMAGE_IMMUNE);
+		return this.isRemoved() || this.isInvulnerable() && !pSource.is(DamageTypeTags.BYPASSES_INVULNERABILITY) && !pSource.isCreativePlayer() || (pSource.is(DamageTypeTags.IS_FIRE) && this.fireytype()) || pSource.is(DamageTypeTags.IS_FALL) && this.getType().is(EntityTypeTags.FALL_DAMAGE_IMMUNE);
 	}
 
 	private boolean fireytype() {
-		if (variant == NynaVariant.FIREY_NYNA || variant == NynaVariant.HAUNTED_NYNA){
+		if (this.fireImmune()||variant == NynaVariant.FIREY_NYNA || variant == NynaVariant.HAUNTED_NYNA){
 			return true;
 		} else
 			return  false;

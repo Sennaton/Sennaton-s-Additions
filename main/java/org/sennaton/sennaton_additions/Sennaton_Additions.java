@@ -31,7 +31,7 @@ import org.sennaton.sennaton_additions.SennatonBlocks.SennatonBlocks;
 import org.sennaton.sennaton_additions.SennatonItems.SennatonItems;
 import org.sennaton.sennaton_additions.SennatonMob.MobInit;
 import org.sennaton.sennaton_additions.SennatonMob.NynaEntity;
-import org.sennaton.sennaton_additions.SennatonMob.Spawns.NynaSpawnCondition;
+import org.sennaton.sennaton_additions.SennatonMob.Spawns.NynaSpawnConditions;
 import org.sennaton.sennaton_additions.client.renderer.dice.DiceRenderer;
 import org.sennaton.sennaton_additions.client.renderer.dice.FrozenDiceRenderer;
 import org.sennaton.sennaton_additions.client.renderer.dice.WarpedDiceRenderer;
@@ -103,7 +103,7 @@ public class Sennaton_Additions {
             int x = pos.getX();
             int y = pos.getY();
             int z = pos.getZ();
-            return true;
+            return NynaSpawnConditions.ShouldSpawn(world, x, y, z);
         });
 
     }

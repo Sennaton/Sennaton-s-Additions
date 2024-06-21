@@ -148,7 +148,7 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 	}
 
 	private boolean fireytype() {
-		if (this.fireImmune()||variant == NynaVariant.FIREY_NYNA || variant == NynaVariant.HAUNTED_NYNA){
+		if (this.fireImmune() || variant == NynaVariant.FIREY_NYNA || variant == NynaVariant.HAUNTED_NYNA){
 			return true;
 		} else
 			return  false;
@@ -187,7 +187,7 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 			}
 
 		});
-		this.targetSelector.addGoal(3, new HurtByTargetGoal(this).setAlertOthers());
+		this.targetSelector.addGoal(3, new HurtByTargetGoal(this, NynaEntity.class).setAlertOthers());
 		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Monster.class, true));
 		this.targetSelector.addGoal(4,	new NearestAttackableTargetGoal(this, TropicalFish.class, true, false));
 		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, Cod.class, true, false));

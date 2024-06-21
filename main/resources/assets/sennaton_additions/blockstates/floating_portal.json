@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "sennaton_additions:block/floating_portal_ew"
+    },
+    "axis=x": {
+      "model": "sennaton_additions:block/floating_portal_ns"
+    }
+  }
+}

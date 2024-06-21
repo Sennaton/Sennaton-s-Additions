@@ -100,14 +100,29 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 		RandomSource randomsource = p_34297_.getRandom();
 		float f = p_34298_.getSpecialMultiplier();
 		this.setCanPickUpLoot(randomsource.nextFloat() < 0.55F * f);
-		variant = Util.getRandom(NynaVariant.values(), this.random);
-		Boolean isDark = NynaSpawnConditions.isDark( p_34297_,this.getX(),  this.getY(),  this.getZ());
+		boolean warped = (randomsource.nextInt(100)>75);
+		boolean isDark = NynaSpawnConditions.isDark( p_34297_,this.getX(),  this.getY(),  this.getZ());
 		switch (BiomeType(p_34297_,this.getX(),  this.getY(),  this.getZ())){
-
+            case "Overworld" -> {
+                if (warped || !isDark){
+                    this.setVariant(NynaVariant.UN_NYNA);}
+                else {
+                    this.setVariant(NynaVariant.NYNA);}
+            }
+            case "Cold/Ocean" ->{
+				if (warped || !isDark){
+					this.setVariant(NynaVariant.UN_NYNA);}
+				else {
+					this.setVariant(NynaVariant.FRIGID_NYNA);}
+			}
+			case "End" ->
+					this.setVariant(NynaVariant.UN_NYNA);
+			case "Nether" ->
+					this.setVariant(NynaVariant.FIREY_NYNA);
+			case "Haunting" ->
+					this.setVariant(NynaVariant.HAUNTED_NYNA);
 		}
 
-
-		setVariant(variant);
 
 
 
@@ -474,8 +489,9 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 		return this.entityData.get(DATA_ID_TYPE_VARIANT);
 	}
 
-	private void setVariant(NynaVariant variant) {
-		this.entityData.set(DATA_ID_TYPE_VARIANT, variant.getId() & 255);
+	private void setVariant(NynaVariant variants) {
+		this.entityData.set(DATA_ID_TYPE_VARIANT, variants.getId() & 255);
+		variant=variants;
 	}
 
 	public static void setVariant(NynaEntity Nyna, NynaVariant Variant) {

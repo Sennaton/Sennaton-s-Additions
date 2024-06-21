@@ -70,6 +70,7 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoField;
 import java.util.EnumSet;
 
+import static org.sennaton.sennaton_additions.SennatonMob.Spawns.NynaSpawnConditions.BiomeType;
 
 
 public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEntity {
@@ -100,11 +101,14 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 		float f = p_34298_.getSpecialMultiplier();
 		this.setCanPickUpLoot(randomsource.nextFloat() < 0.55F * f);
 		variant = Util.getRandom(NynaVariant.values(), this.random);
-		Boolean isCold = NynaSpawnConditions.isCold( p_34297_,this.getX(),  this.getY(),  this.getZ());
 		Boolean isDark = NynaSpawnConditions.isDark( p_34297_,this.getX(),  this.getY(),  this.getZ());
-		Boolean isNether = NynaSpawnConditions.isNether( p_34297_,this.getX(),  this.getY(),  this.getZ());
-		Boolean isHaunting = NynaSpawnConditions.isHaunting( p_34297_,this.getX(),  this.getY(),  this.getZ());
+		switch (BiomeType(p_34297_,this.getX(),  this.getY(),  this.getZ())){
+
+		}
+
+
 		setVariant(variant);
+
 
 
 

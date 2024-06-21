@@ -1,5 +1,6 @@
 package org.sennaton.sennaton_additions.SennatonMob.Spawns;
 
+import com.sun.jna.WString;
 import net.minecraft.data.worldgen.biome.NetherBiomes;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.core.BlockPos;
@@ -23,8 +24,30 @@ public class NynaSpawnConditions {
 	public static boolean isHaunting(LevelAccessor world, double x, double y, double z){
 		return false;//(world.getBiome(BlockPos.containing(x, y, z)).getClass().isAssignableFrom(NetherBiomes)  );
 	}
+	public static boolean isEnd(LevelAccessor world, double x, double y, double z){
+		return false;//(world.getBiome(BlockPos.containing(x, y, z)).getClass().isAssignableFrom(NetherBiomes)  );
+	}
+
+	public static String BiomeType(LevelAccessor world, double x, double y, double z){
+		String type = "None";
+		if (isNether(world, x, y, z)){
+			if (isHaunting(world, x, y, z)){
+				type = "Haunting";}
+			else {
+				type = "Nether";}
+		}
+		else if (isEnd(world, x, y, z)){
+			type = "End";}
+		else if (isCold(world, x, y, z)){
+			type= "Cold";}
+		else type = "Overworld";
+		return type;
+	}
+
+
+
 	public static boolean ShouldSpawn(LevelAccessor world, double x, double y, double z){
-		if (isNether(world, x, y, z) || isDark(world, x, y, z)){
+		if (isNether(world, x, y, z) || isDark(world, x, y, z) || isEnd(world, x, y, z)){
 			return true;
 		} else {
 			return (random.nextInt(100) > 75);

@@ -1,0 +1,18 @@
+{
+  "item.sennaton_additions.hardened_diamond": "Hardened Diamond",
+  "entity.sennaton_additions.nyna": "Nyna",
+  "entity.sennaton_additions.dice": "Die",
+  "entity.sennaton_additions.frozen_dice": "Frozen Die",
+  "entity.sennaton_additions.warped_dice": "Warped Die",
+  "entity.sennaton_additions.burning_dice": "Burning Die",
+  "entity.sennaton_additions.haunted_dice": "Haunted Die",
+  "death.attack.sharp_crystal_hurt.player": "%1$s tried to sharpen their blade on %2$s without a hilt.",
+  "death.attack.sharp_crystal_hurt": "%1$s tried to wield a sword without a hilt.",
+  "item.sennaton_additions.sharpened_crystal": "Sharpened Crystal",
+  "death.attack.sharp_crystal_hurt.item": "%1$s was killed with an incomplete %3$s by %2$s.",
+  "item.sennaton_additions.crystal_edge": "Crystal Edge",
+  "item.sennaton_additions.wrapped_coal": "Wrapped Coal",
+  "item.sennaton_additions.nyna_spawn_egg": "Nyna Spawn Egg",
+  "block.sennaton_additions.floating_portal": "Portal"
+
+}

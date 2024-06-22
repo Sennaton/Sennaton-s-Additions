@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Specification-Title: sennaton_additions
+Specification-Vendor: 
+Specification-Version: 1
+Implementation-Title: Sennaton_Additions
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor: 
+Implementation-Timestamp: 2024-06-21T21:25:30-0700
+MixinConfigs: sennaton_additions.mixins.json
+

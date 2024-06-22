@@ -5,81 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97c4f85d-fcf7-49b2-acd5-aa356a6bd5a5" name="Changes" comment="Reparent the root directory to allow others to build.">
-      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/src/main/resources/data/sennaton_additions/dimension/Credits.md" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/8.4/checksums/checksums.lock" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/8.4/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/8.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/8.4/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/8.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/8.4/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/8.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/8.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/file-system.probe" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-1.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-1.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-10.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-10.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-11.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-11.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-12.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-12.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-13.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-13.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-14.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-14.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-15.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-15.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-16.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-16.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-17.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-17.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-18.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-18.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-19.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-19.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-2.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-2.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-20.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-20.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-21.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-21.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-22.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-22.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-23.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-23.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-24.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-24.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-3.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-3.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-4.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-4.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-5.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-5.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-6.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-6.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-7.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-7.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-8.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-8.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-9.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-21-9.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/debug-1.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/debug-1.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/debug-2.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/debug-2.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/debug-3.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/debug-3.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/debug-4.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/debug-4.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/debug-5.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/debug-5.log.gz" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/debug.log" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/debug.log" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/latest.log" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/latest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-21-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-21-1.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-21-10.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-21-10.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-21-11.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-21-11.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-21-12.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-21-12.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-21-13.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-21-13.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-21-14.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-21-14.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-21-15.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-21-15.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-21-16.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-21-16.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-21-17.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-21-17.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-21-18.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-21-18.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-21-19.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-21-19.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-21-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-21-2.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-21-20.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-21-20.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-21-21.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-21-21.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-21-22.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-21-22.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-21-23.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-21-23.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-21-24.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-21-24.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-21-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-21-3.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-21-4.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-21-4.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-21-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-21-5.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-21-6.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-21-6.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-21-7.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-21-7.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-21-8.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-21-8.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-21-9.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-21-9.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-2.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-3.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-4.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-4.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-5.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/.idea/workspace.xml" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/src/main/java/org/sennaton/sennaton_additions/SennatonMob/Dice/BurningDiceEntity.java" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/src/main/java/org/sennaton/sennaton_additions/SennatonMob/Dice/BurningDiceEntity.java" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/src/main/java/org/sennaton/sennaton_additions/SennatonMob/Dice/FrozenDiceEntity.java" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/src/main/java/org/sennaton/sennaton_additions/SennatonMob/Dice/FrozenDiceEntity.java" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/src/main/java/org/sennaton/sennaton_additions/SennatonMob/Dice/HauntedDiceEntity.java" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/src/main/java/org/sennaton/sennaton_additions/SennatonMob/Dice/HauntedDiceEntity.java" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/src/main/resources/data/sennaton_additions/dimension/Credits.md" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/src/main/resources/data/sennaton_additions/dimension/Credits.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sennaton/sennaton_additions/SennatonMob/Dice/BurningDiceEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sennaton/sennaton_additions/SennatonMob/Dice/BurningDiceEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/sennaton_additions/dimension/Credits.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/sennaton_additions/dimension/Credits.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,38 +169,39 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Sennaton_Additions [:createMcpToSrg :createMcpToSrg :createMcpToSrg].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Sennaton_Additions [compileJava].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Sennaton_Additions [dependencies].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Sennaton_Additions [genIntellijRuns].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Sennaton_Additions [wrapper].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Sennaton_Additions build.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Sennaton_Additions.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Sennaton_Additions::Storage:IdeaProjects:Sennaton_Additions [buildDependents].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Sennaton_Additions::Storage:IdeaProjects:Sennaton_Additions [buildEnvironment].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Sennaton_Additions::Storage:IdeaProjects:Sennaton_Additions [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Sennaton_Additions::Storage:IdeaProjects:Sennaton_Additions [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Sennaton_Additions::Storage:IdeaProjects:Sennaton_Additions [genIntellijRuns].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Sennaton_Additions::Storage:IdeaProjects:Sennaton_Additions [init].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Sennaton_Additions::Storage:IdeaProjects:Sennaton_Additions [prepareRuns].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Sennaton_Additions::Storage:IdeaProjects:Sennaton_Additions [runClient].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Sennaton_Additions::Storage:IdeaProjects:Sennaton_Additions [tasks].executor&quot;: &quot;Run&quot;,
-    &quot;JAR Application.sennaton_additions-1.0-SNAPSHOT.jar.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Shell Script.gradlew (1).executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.gradlew.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/sennaton/IdeaProjects/Sennaton_Additions/src&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Gradle.Download Sources.executor": "Run",
+    "Gradle.Sennaton_Additions [:createMcpToSrg :createMcpToSrg :createMcpToSrg].executor": "Run",
+    "Gradle.Sennaton_Additions [compileJava].executor": "Run",
+    "Gradle.Sennaton_Additions [dependencies].executor": "Run",
+    "Gradle.Sennaton_Additions [genIntellijRuns].executor": "Run",
+    "Gradle.Sennaton_Additions [wrapper].executor": "Run",
+    "Gradle.Sennaton_Additions build.executor": "Run",
+    "Gradle.Sennaton_Additions.executor": "Run",
+    "Gradle.Sennaton_Additions::Storage:IdeaProjects:Sennaton_Additions [buildDependents].executor": "Run",
+    "Gradle.Sennaton_Additions::Storage:IdeaProjects:Sennaton_Additions [buildEnvironment].executor": "Run",
+    "Gradle.Sennaton_Additions::Storage:IdeaProjects:Sennaton_Additions [build].executor": "Run",
+    "Gradle.Sennaton_Additions::Storage:IdeaProjects:Sennaton_Additions [clean].executor": "Run",
+    "Gradle.Sennaton_Additions::Storage:IdeaProjects:Sennaton_Additions [genIntellijRuns].executor": "Run",
+    "Gradle.Sennaton_Additions::Storage:IdeaProjects:Sennaton_Additions [init].executor": "Run",
+    "Gradle.Sennaton_Additions::Storage:IdeaProjects:Sennaton_Additions [prepareRuns].executor": "Run",
+    "Gradle.Sennaton_Additions::Storage:IdeaProjects:Sennaton_Additions [runClient].executor": "Run",
+    "Gradle.Sennaton_Additions::Storage:IdeaProjects:Sennaton_Additions [tasks].executor": "Run",
+    "JAR Application.sennaton_additions-1.0-SNAPSHOT.jar.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Shell Script.gradlew (1).executor": "Run",
+    "Shell Script.gradlew.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/sennaton/IdeaProjects/Sennaton_Additions/src",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.sennaton.sennaton_additions.client.renderer" />
@@ -467,6 +401,15 @@
       <option name="presentableId" value="Default" />
       <updated>1718448228049</updated>
     </task>
+    <task id="LOCAL-00001" summary="Reparent the root directory to allow others to build.">
+      <option name="closed" value="true" />
+      <created>1719035539805</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1719035539805</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -481,6 +424,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="/Storage/IdeaProjects/Sennaton_Additions/src" />
     </ignored-roots>

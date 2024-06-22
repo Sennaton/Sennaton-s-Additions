@@ -1,2 +1,2 @@
-#Credit for worldgen pattern.
+# Credit for worldgen pattern.
 Credit goes to Quidvio.

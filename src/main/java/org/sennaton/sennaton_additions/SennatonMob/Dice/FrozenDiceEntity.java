@@ -3,6 +3,9 @@ package org.sennaton.sennaton_additions.SennatonMob.Dice;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
@@ -59,6 +62,13 @@ public class FrozenDiceEntity extends LoadedDiceEntity {
         entity.level().addFreshEntity(entityarrow);
         entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
         return entityarrow;
+    }
+
+    @Override
+    protected void doPostHurtEffects(LivingEntity pLiving) {
+        super.doPostHurtEffects(pLiving);
+        Entity entity = this.getEffectSource();
+        pLiving.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 140));
     }
 
 }

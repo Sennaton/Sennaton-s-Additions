@@ -1,2 +1,2 @@
-# Sennaton-s-Additions
+# Sennaton's Additions
 A Minecraft mod with new stuff.

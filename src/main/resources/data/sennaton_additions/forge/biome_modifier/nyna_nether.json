@@ -4,7 +4,7 @@
   "spawners":
   {
     "type": "sennaton_additions:nyna",
-    "weight": 100,
+    "weight": 25,
     "minCount": 1,
     "maxCount": 10
   }

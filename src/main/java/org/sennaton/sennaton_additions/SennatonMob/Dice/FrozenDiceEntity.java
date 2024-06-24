@@ -46,7 +46,7 @@ public class FrozenDiceEntity extends LoadedDiceEntity {
     }
 
     public static FrozenDiceEntity shoot(LivingEntity entity, LivingEntity target, String variantP) {
-        Sennaton_Additions.LOGGER.info(variantP.toString()+" FrozenDice");
+        //Sennaton_Additions.LOGGER.info(variantP.toString()+" FrozenDice");
 
 
         FrozenDiceEntity entityarrow = new FrozenDiceEntity(MobInit.FROZEN_DICE.get(), entity, entity.level());

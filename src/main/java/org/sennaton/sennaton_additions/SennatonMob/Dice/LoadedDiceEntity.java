@@ -18,6 +18,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 
 import org.sennaton.sennaton_additions.Sennaton_Additions;
+import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import software.bernie.geckolib.core.object.PlayState;
@@ -46,16 +47,13 @@ import java.util.Collection;
 
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
-public class LoadedDiceEntity extends AbstractArrow implements GeoAnimatable {
+public class LoadedDiceEntity extends AbstractArrow implements GeoEntity {
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(LoadedDiceEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(LoadedDiceEntity.class, EntityDataSerializers.STRING);
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	protected IntOpenHashSet piercingIgnoreEntityIds;
 	protected Collection<Entity> piercedAndKilledEntities;
 	protected SoundEvent soundEvent;
-	private boolean swinging;
-	private boolean lastloop;
-	private long lastSwing;
 	public String animationprocedure = "empty";
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.BARRIER);
 	/*private static final EntityDataAccessor<String> DATA_ID_TYPE_VARIANT =
@@ -192,10 +190,6 @@ public class LoadedDiceEntity extends AbstractArrow implements GeoAnimatable {
 		return this.cache;
 	}
 
-	@Override
-	public double getTick(Object o) {
-		return 0;
-	}
 
 
 

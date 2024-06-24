@@ -43,7 +43,7 @@ public class DiceEntity extends LoadedDiceEntity {
 	}
 
 	public static DiceEntity shoot(LivingEntity entity, LivingEntity target, String variantP) {
-		Sennaton_Additions.LOGGER.info(variantP.toString()+" Dice");
+		//Sennaton_Additions.LOGGER.info(variantP.toString()+" Dice");
 
 
 		DiceEntity entityarrow = new DiceEntity(MobInit.DICE.get(), entity, entity.level());

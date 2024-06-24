@@ -28,6 +28,7 @@ import software.bernie.geckolib.renderer.GeoEntityRenderer;
 
 import org.sennaton.sennaton_additions.SennatonMob.model.NynaModel;
 import org.sennaton.sennaton_additions.SennatonMob.NynaEntity;
+import software.bernie.geckolib.renderer.layer.AutoGlowingGeoLayer;
 import software.bernie.geckolib.renderer.layer.BlockAndItemGeoLayer;
 import software.bernie.geckolib.renderer.layer.ItemArmorGeoLayer;
 
@@ -69,6 +70,7 @@ public class NynaRenderer extends GeoEntityRenderer<NynaEntity> {
 	protected ItemStack offhandItem;
 	public NynaRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new NynaModel());
+		addRenderLayer(new AutoGlowingGeoLayer<NynaEntity>(this));
 
 		// Add some armor rendering
 		addRenderLayer(new ItemArmorGeoLayer<>(this) {

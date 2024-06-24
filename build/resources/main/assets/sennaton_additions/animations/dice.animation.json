@@ -6,13 +6,26 @@
 			"bones": {
 				"body": {
 					"rotation":
-						["math.sin(query.anim_time * 300) * 360",
-						"math.sin(query.anim_time * 300) * 360",
-						"math.sin(query.anim_time * 300) * 360"]
+						["math.sin(query.anim_time * 100) * 150",
+						"math.cos(query.anim_time * 100) * 150",
+						"math.sin(query.anim_time * 100) * 150"]
+
+				}
+			}
+		},
+		"animation.loaded_dice.idle": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation":
+					["math.sin(query.anim_time * 105) * 180",
+						"math.cos(query.anim_time * 105) * 180",
+						"math.sin(query.anim_time * 105) * 180"]
 
 				}
 			}
 		}
+
 	},
 	"geckolib_format_version": 2
 }

@@ -46,7 +46,7 @@ public class HauntedDiceEntity extends LoadedDiceEntity {
     }
 
     public static HauntedDiceEntity shoot(LivingEntity entity, LivingEntity target, String variantP) {
-        Sennaton_Additions.LOGGER.info(variantP.toString()+" HauntedDice");
+        //Sennaton_Additions.LOGGER.info(variantP.toString()+" HauntedDice");
 
 
         HauntedDiceEntity entityarrow = new HauntedDiceEntity(MobInit.HAUNTED_DICE.get(), entity, entity.level());

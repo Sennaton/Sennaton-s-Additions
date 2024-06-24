@@ -65,7 +65,7 @@ public class WarpedDiceEntity extends LoadedDiceEntity {
     }
 
     public static WarpedDiceEntity shoot(LivingEntity entity, LivingEntity target, String variantP) {
-        Sennaton_Additions.LOGGER.info(variantP.toString()+" WarpedDice");
+        //Sennaton_Additions.LOGGER.info(variantP.toString()+" WarpedDice");
 
         WarpedDiceEntity entityarrow = new WarpedDiceEntity(MobInit.WARPED_DICE.get(), entity, entity.level());
         entityarrow.setOwner(entity);

@@ -11,7 +11,9 @@ import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.animal.*;
+import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.ServerLevelAccessor;
@@ -19,6 +21,7 @@ import net.minecraft.world.level.block.Blocks;
 import org.sennaton.sennaton_additions.SennatonMob.Dice.*;
 import org.sennaton.sennaton_additions.SennatonMob.Spawns.NynaSpawnConditions;
 import org.sennaton.sennaton_additions.Sennaton_Additions;
+import software.bernie.geckolib.constant.DefaultAnimations;
 import software.bernie.geckolib.util.GeckoLibUtil;
 import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.core.animation.RawAnimation;
@@ -38,13 +41,6 @@ import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.OpenDoorGoal;
-import net.minecraft.world.entity.ai.goal.MoveBackToVillageGoal;
-import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.Goal;
-import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.damagesource.DamageTypes;
@@ -87,8 +83,10 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 			SynchedEntityData.defineId(NynaEntity.class, EntityDataSerializers.INT);
 
 
-
-
+	@Override
+	public double getBoneResetTime() {
+		return 4;
+	}
 
 	public NynaEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(MobInit.NYNA.get(), world);
@@ -206,6 +204,7 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 			}
 
 		});
+		this.goalSelector.addGoal(0, new AvoidEntityGoal<>(this, Creeper.class, 6.0F, 1.0D, 1.2D));
 		this.targetSelector.addGoal(3, new HurtByTargetGoal(this, NynaEntity.class).setAlertOthers());
 		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Monster.class, true));
 		this.targetSelector.addGoal(4,	new NearestAttackableTargetGoal(this, TropicalFish.class, true, false));
@@ -424,30 +423,15 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 		return builder;
 	}
 
-	private PlayState movementPredicate(AnimationState event) {
-		if (this.animationprocedure.equals("empty")) {
-			if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F))
+	/*private PlayState movementPredicate(AnimationState event) {
+			if (event.isMoving())
 
-			) {
+			 {
 				return event.setAndContinue(RawAnimation.begin().thenLoop("animation.nyna.walk"));
 			}
 			return event.setAndContinue(RawAnimation.begin().thenLoop("animation.nyna.idle"));
-		}
-		return PlayState.STOP;
-	}
+	}*/
 
-	private PlayState procedurePredicate(AnimationState event) {
-		if (!animationprocedure.equals("empty") && event.getController().getAnimationState() == AnimationController.State.STOPPED) {
-			event.getController().setAnimation(RawAnimation.begin().thenPlay(this.animationprocedure));
-			if (event.getController().getAnimationState() == AnimationController.State.STOPPED) {
-				this.animationprocedure = "empty";
-				event.getController().forceAnimationReset();
-			}
-		} else if (animationprocedure.equals("empty")) {
-			return PlayState.STOP;
-		}
-		return PlayState.CONTINUE;
-	}
 
 	@Override
 	protected void tickDeath() {
@@ -467,12 +451,12 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 	}
 
 	@Override
-	public void registerControllers(AnimatableManager.ControllerRegistrar data) {
-		data.add(new AnimationController<>(this, "movement", 4, this::movementPredicate));
-		data.add(new AnimationController<>(this, "procedure", 4, this::procedurePredicate));
+	public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
+		controllers.add(DefaultAnimations.genericWalkIdleController(this));
+		//data.add(new AnimationController<>(this, "movement", 4, this::movementPredicate));
+		DefaultAnimations.genericLivingController(this);
 	}
 
-	@Override
 	public AnimatableInstanceCache getAnimatableInstanceCache() {
 		return this.cache;
 	}

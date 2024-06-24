@@ -46,7 +46,7 @@ public class BurningDiceEntity extends LoadedDiceEntity {
     }
 
     public static BurningDiceEntity shoot(LivingEntity entity, LivingEntity target, String variantP) {
-        Sennaton_Additions.LOGGER.info(variantP.toString()+" BurningDice");
+        //Sennaton_Additions.LOGGER.info(variantP.toString()+" BurningDice");
 
 
         BurningDiceEntity entityarrow = new BurningDiceEntity(MobInit.BURNING_DICE.get(), entity, entity.level());

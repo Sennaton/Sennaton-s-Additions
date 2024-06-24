@@ -38,6 +38,7 @@ import org.sennaton.sennaton_additions.SennatonItems.SennatonItems;
 import org.sennaton.sennaton_additions.SennatonMob.MobInit;
 import org.sennaton.sennaton_additions.SennatonMob.NynaEntity;
 import org.sennaton.sennaton_additions.SennatonMob.Spawns.NynaSpawnConditions;
+import org.sennaton.sennaton_additions.Sound.Sound;
 import org.sennaton.sennaton_additions.client.renderer.dice.DiceRenderer;
 import org.sennaton.sennaton_additions.client.renderer.dice.FrozenDiceRenderer;
 import org.sennaton.sennaton_additions.client.renderer.dice.WarpedDiceRenderer;
@@ -70,7 +71,7 @@ public class Sennaton_Additions {
         MobInit.REGISTRY.register(modEventBus);
        // SpawnPlacements.register(MobInit.NYNA.get(),
          //       SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Animal::checkAnimalSpawnRules);
-
+        Sound.register(modEventBus);
 
 
         // Register the commonSetup method for modloading

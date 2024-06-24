@@ -10,6 +10,7 @@ import net.minecraft.client.model.ZombieModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.model.geom.ModelPart;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
@@ -24,6 +25,7 @@ import org.sennaton.sennaton_additions.client.renderer.NynaRenderer;
 import software.bernie.geckolib.GeckoLib;
 import software.bernie.geckolib.cache.object.BakedGeoModel;
 import software.bernie.geckolib.cache.object.GeoBone;
+import software.bernie.geckolib.cache.texture.AutoGlowingTexture;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
 
 import org.sennaton.sennaton_additions.SennatonMob.model.NynaModel;
@@ -70,8 +72,9 @@ public class NynaRenderer extends GeoEntityRenderer<NynaEntity> {
 	protected ItemStack offhandItem;
 	public NynaRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new NynaModel());
-		addRenderLayer(new AutoGlowingGeoLayer<NynaEntity>(this));
 
+		//addRenderLayer(new AutoGlowingGeoLayer<>(this){});
+		addRenderLayer(new GlowLayer(this ));
 		// Add some armor rendering
 		addRenderLayer(new ItemArmorGeoLayer<>(this) {
 			@Nullable

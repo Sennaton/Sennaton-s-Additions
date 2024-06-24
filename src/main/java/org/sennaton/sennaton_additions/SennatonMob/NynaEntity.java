@@ -313,6 +313,11 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 		return MobType.UNDEFINED;
 	}
 
+	/*@Override
+	public SoundEvent getAmbi (DamageSource ds) {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.nyna.hurt"));
+	}*/
+
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.nyna.hurt"));

@@ -16,6 +16,7 @@ public class HauntedDiceRenderer extends GeoEntityRenderer<HauntedDiceEntity> {
 
     public HauntedDiceRenderer(EntityRendererProvider.Context renderManager) {
         super(renderManager, new HauntedDiceModel());
+        addRenderLayer(new GlowLayerDice(this, new ResourceLocation(Sennaton_Additions.MODID, "textures/entity/nyna/haunted_dice.png")));
     }
 
     @Override

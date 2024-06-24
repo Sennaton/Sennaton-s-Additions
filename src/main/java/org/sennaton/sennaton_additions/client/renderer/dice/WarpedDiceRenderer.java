@@ -8,6 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 import org.sennaton.sennaton_additions.SennatonMob.Dice.WarpedDiceEntity;
 import org.sennaton.sennaton_additions.SennatonMob.model.Dice.WarpedDiceModel;
 import org.sennaton.sennaton_additions.Sennaton_Additions;
+import org.sennaton.sennaton_additions.client.renderer.GlowLayer;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
 
 
@@ -16,6 +17,7 @@ public class WarpedDiceRenderer extends GeoEntityRenderer<WarpedDiceEntity> {
 
     public WarpedDiceRenderer(EntityRendererProvider.Context renderManager) {
         super(renderManager, new WarpedDiceModel());
+        addRenderLayer(new GlowLayerDice(this, new ResourceLocation(Sennaton_Additions.MODID, "textures/entity/nyna/warped_dice.png")));
     }
 
     @Override

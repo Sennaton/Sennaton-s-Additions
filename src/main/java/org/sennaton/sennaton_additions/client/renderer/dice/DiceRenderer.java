@@ -16,6 +16,7 @@ public class DiceRenderer extends GeoEntityRenderer<DiceEntity> {
 
 	public DiceRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new DiceModel());
+		addRenderLayer(new GlowLayerDice(this, new ResourceLocation(Sennaton_Additions.MODID, "textures/entity/nyna/dice.png")));
 	}
 
 	@Override

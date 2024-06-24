@@ -16,6 +16,7 @@ public class BurningDiceRenderer extends GeoEntityRenderer<BurningDiceEntity> {
 
     public BurningDiceRenderer(EntityRendererProvider.Context renderManager) {
         super(renderManager, new BurningDiceModel());
+        addRenderLayer(new GlowLayerDice(this, new ResourceLocation(Sennaton_Additions.MODID, "textures/entity/nyna/burning_dice.png")));
     }
 
     @Override

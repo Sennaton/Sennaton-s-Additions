@@ -5,22 +5,102 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97c4f85d-fcf7-49b2-acd5-aa356a6bd5a5" name="Changes" comment="Fix textures.">
-      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-27.log.gz" afterDir="false" />
-      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/src/main/java/org/sennaton/sennaton_additions/client/renderer/dice/GlowLayerDice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/logs/2024-06-24-27.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/sennaton/sennaton_additions/client/renderer/dice/GlowLayerDice.java" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-30.log.gz" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-31.log.gz" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-32.log.gz" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-33.log.gz" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-34.log.gz" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/entities/r.27.8.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/poi/r.0.1.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/poi/r.27.8.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.27.7.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.27.8.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.27.9.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.28.8.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.28.9.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/entities/r.27.7.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/entities/r.27.8.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/entities/r.27.9.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/entities/r.28.7.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/entities/r.28.8.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/entities/r.28.9.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/poi/r.26.7.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/poi/r.26.8.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/poi/r.26.9.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/poi/r.27.7.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/poi/r.27.8.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/poi/r.27.9.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/poi/r.28.7.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/poi/r.28.8.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/poi/r.28.9.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/region/r.26.7.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/region/r.26.8.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/region/r.26.9.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/region/r.27.7.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/region/r.27.8.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/region/r.27.9.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/region/r.28.7.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/region/r.28.8.mca" afterDir="false" />
+      <change afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/region/r.28.9.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2024-06-24-30.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2024-06-24-31.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2024-06-24-32.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2024-06-24-33.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2024-06-24-34.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/entities/r.27.8.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/poi/r.0.1.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/poi/r.27.8.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.27.7.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.27.8.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.27.9.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.28.8.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.28.9.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/entities/r.27.7.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/entities/r.27.8.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/entities/r.27.9.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/entities/r.28.7.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/entities/r.28.8.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/entities/r.28.9.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/poi/r.26.7.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/poi/r.26.8.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/poi/r.26.9.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/poi/r.27.7.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/poi/r.27.8.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/poi/r.27.9.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/poi/r.28.7.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/poi/r.28.8.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/poi/r.28.9.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/region/r.26.7.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/region/r.26.8.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/region/r.26.9.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/region/r.27.7.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/region/r.27.8.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/region/r.27.9.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/region/r.28.7.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/region/r.28.8.mca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/New World (2)/region/r.28.9.mca" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/8.4/checksums/checksums.lock" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/8.4/checksums/checksums.lock" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/8.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/8.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/8.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/8.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/8.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/8.4/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/8.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/8.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/8.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/8.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/file-system.probe" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/.idea/workspace.xml" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/build/classes/java/main/org/sennaton/sennaton_additions/SennatonMob/NynaEntity$1.class" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/build/classes/java/main/org/sennaton/sennaton_additions/SennatonMob/NynaEntity$1.class" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/build/classes/java/main/org/sennaton/sennaton_additions/SennatonMob/NynaEntity$2.class" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/build/classes/java/main/org/sennaton/sennaton_additions/SennatonMob/NynaEntity$2.class" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/build/classes/java/main/org/sennaton/sennaton_additions/SennatonMob/NynaEntity$3.class" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/build/classes/java/main/org/sennaton/sennaton_additions/SennatonMob/NynaEntity$3.class" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/build/classes/java/main/org/sennaton/sennaton_additions/SennatonMob/NynaEntity$RangedAttackGoal.class" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/build/classes/java/main/org/sennaton/sennaton_additions/SennatonMob/NynaEntity$RangedAttackGoal.class" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/build/classes/java/main/org/sennaton/sennaton_additions/SennatonMob/NynaEntity.class" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/build/classes/java/main/org/sennaton/sennaton_additions/SennatonMob/NynaEntity.class" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/build/classes/java/main/org/sennaton/sennaton_additions/Sound/Sound.class" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/build/classes/java/main/org/sennaton/sennaton_additions/Sound/Sound.class" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/build/classes/java/main/org/sennaton/sennaton_additions/client/renderer/dice/BurningDiceRenderer.class" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/build/classes/java/main/org/sennaton/sennaton_additions/client/renderer/dice/BurningDiceRenderer.class" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/build/classes/java/main/org/sennaton/sennaton_additions/client/renderer/dice/DiceRenderer.class" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/build/classes/java/main/org/sennaton/sennaton_additions/client/renderer/dice/DiceRenderer.class" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/build/classes/java/main/org/sennaton/sennaton_additions/client/renderer/dice/FrozenDiceRenderer.class" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/build/classes/java/main/org/sennaton/sennaton_additions/client/renderer/dice/FrozenDiceRenderer.class" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/build/classes/java/main/org/sennaton/sennaton_additions/client/renderer/dice/HauntedDiceRenderer.class" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/build/classes/java/main/org/sennaton/sennaton_additions/client/renderer/dice/HauntedDiceRenderer.class" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/build/classes/java/main/org/sennaton/sennaton_additions/client/renderer/dice/WarpedDiceRenderer.class" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/build/classes/java/main/org/sennaton/sennaton_additions/client/renderer/dice/WarpedDiceRenderer.class" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/build/tmp/compileJava/compileTransaction/stash-dir/GlowLayer.class.uniqueId2" beforeDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/build/tmp/compileJava/compileTransaction/stash-dir/NynaRenderer$1.class.uniqueId1" beforeDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/build/tmp/compileJava/compileTransaction/stash-dir/NynaRenderer$2.class.uniqueId0" beforeDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/build/tmp/compileJava/compileTransaction/stash-dir/NynaRenderer.class.uniqueId3" beforeDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/build/resources/main/assets/sennaton_additions/sounds.json" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/build/resources/main/assets/sennaton_additions/sounds.json" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/build/resources/main/assets/sennaton_additions/textures/entity/nyna/frozen_dice_glowmask.png" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/build/resources/main/assets/sennaton_additions/textures/entity/nyna/frozen_dice_glowmask.png" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-1.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-1.log.gz" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-10.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-10.log.gz" afterDir="false" />
@@ -41,6 +121,9 @@
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-24.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-24.log.gz" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-25.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-25.log.gz" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-26.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-26.log.gz" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-27.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-27.log.gz" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-28.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-28.log.gz" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-29.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-29.log.gz" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-3.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-3.log.gz" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-4.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-4.log.gz" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-5.log.gz" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/logs/2024-06-24-5.log.gz" afterDir="false" />
@@ -58,6 +141,9 @@
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/DIM-1/data/raids.dat" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/DIM-1/data/raids.dat" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/DIM-1/entities/r.3.0.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/DIM-1/entities/r.3.0.mca" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/DIM-1/entities/r.3.1.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/DIM-1/entities/r.3.1.mca" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/DIM-1/entities/r.4.0.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/DIM-1/entities/r.4.0.mca" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/DIM-1/entities/r.4.1.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/DIM-1/entities/r.4.1.mca" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/DIM-1/poi/r.3.1.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/DIM-1/poi/r.3.1.mca" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/DIM-1/region/r.2.0.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/DIM-1/region/r.2.0.mca" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/DIM-1/region/r.2.1.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/DIM-1/region/r.2.1.mca" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/DIM-1/region/r.3.0.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/DIM-1/region/r.3.0.mca" afterDir="false" />
@@ -65,9 +151,23 @@
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/DIM-1/region/r.4.0.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/DIM-1/region/r.4.0.mca" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/DIM-1/region/r.4.1.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/DIM-1/region/r.4.1.mca" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/DIM1/data/raids_end.dat" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/DIM1/data/raids_end.dat" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/advancements/380df991-f603-344c-a090-369bad2a924a.json" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/advancements/380df991-f603-344c-a090-369bad2a924a.json" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/data/raids.dat" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/data/raids.dat" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/data/random_sequences.dat" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/data/random_sequences.dat" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/data/raids.dat" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/data/raids.dat" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/entities/r.1.0.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/entities/r.1.0.mca" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/entities/r.1.1.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/entities/r.1.1.mca" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/entities/r.2.0.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/entities/r.2.0.mca" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/entities/r.2.1.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/entities/r.2.1.mca" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/poi/r.1.0.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/poi/r.1.0.mca" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.0.-1.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.0.-1.mca" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.0.0.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.0.0.mca" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.0.1.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.0.1.mca" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.1.0.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.1.0.mca" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.1.1.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.1.1.mca" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.2.-1.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.2.-1.mca" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.2.0.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.2.0.mca" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.2.1.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.2.1.mca" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/entities/r.-1.0.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/entities/r.-1.0.mca" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/entities/r.0.0.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/entities/r.0.0.mca" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/level.dat" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/level.dat" afterDir="false" />
@@ -79,25 +179,35 @@
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/region/r.-1.1.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/region/r.-1.1.mca" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/region/r.0.0.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/region/r.0.0.mca" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/region/r.0.1.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/region/r.0.1.mca" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/region/r.1.0.mca" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/region/r.1.0.mca" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/stats/380df991-f603-344c-a090-369bad2a924a.json" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/saves/New World (2)/stats/380df991-f603-344c-a090-369bad2a924a.json" afterDir="false" />
       <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/run/usercache.json" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/run/usercache.json" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/src/main/java/org/sennaton/sennaton_additions/client/renderer/dice/BurningDiceRenderer.java" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/src/main/java/org/sennaton/sennaton_additions/client/renderer/dice/BurningDiceRenderer.java" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/src/main/java/org/sennaton/sennaton_additions/client/renderer/dice/DiceRenderer.java" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/src/main/java/org/sennaton/sennaton_additions/client/renderer/dice/DiceRenderer.java" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/src/main/java/org/sennaton/sennaton_additions/client/renderer/dice/FrozenDiceRenderer.java" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/src/main/java/org/sennaton/sennaton_additions/client/renderer/dice/FrozenDiceRenderer.java" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/src/main/java/org/sennaton/sennaton_additions/client/renderer/dice/HauntedDiceRenderer.java" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/src/main/java/org/sennaton/sennaton_additions/client/renderer/dice/HauntedDiceRenderer.java" afterDir="false" />
-      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/src/main/java/org/sennaton/sennaton_additions/client/renderer/dice/WarpedDiceRenderer.java" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/src/main/java/org/sennaton/sennaton_additions/client/renderer/dice/WarpedDiceRenderer.java" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/src/main/java/org/sennaton/sennaton_additions/SennatonMob/NynaEntity.java" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/src/main/java/org/sennaton/sennaton_additions/SennatonMob/NynaEntity.java" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/src/main/java/org/sennaton/sennaton_additions/Sound/Sound.java" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/src/main/java/org/sennaton/sennaton_additions/Sound/Sound.java" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/src/main/resources/assets/sennaton_additions/sounds.json" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/src/main/resources/assets/sennaton_additions/sounds.json" afterDir="false" />
+      <change beforePath="/Storage/IdeaProjects/Sennaton_Additions/src/main/resources/assets/sennaton_additions/textures/entity/nyna/frozen_dice_glowmask.png" beforeDir="false" afterPath="/Storage/IdeaProjects/Sennaton_Additions/src/main/resources/assets/sennaton_additions/textures/entity/nyna/frozen_dice_glowmask.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/sennaton/sennaton_additions/SennatonMob/NynaEntity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/sennaton/sennaton_additions/SennatonMob/NynaEntity$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/sennaton/sennaton_additions/SennatonMob/NynaEntity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/sennaton/sennaton_additions/SennatonMob/NynaEntity$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/sennaton/sennaton_additions/SennatonMob/NynaEntity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/sennaton/sennaton_additions/SennatonMob/NynaEntity$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/sennaton/sennaton_additions/SennatonMob/NynaEntity$RangedAttackGoal.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/sennaton/sennaton_additions/SennatonMob/NynaEntity$RangedAttackGoal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/sennaton/sennaton_additions/SennatonMob/NynaEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/sennaton/sennaton_additions/SennatonMob/NynaEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/sennaton/sennaton_additions/Sound/Sound.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/sennaton/sennaton_additions/Sound/Sound.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/sennaton/sennaton_additions/client/renderer/dice/BurningDiceRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/sennaton/sennaton_additions/client/renderer/dice/BurningDiceRenderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/sennaton/sennaton_additions/client/renderer/dice/DiceRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/sennaton/sennaton_additions/client/renderer/dice/DiceRenderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/sennaton/sennaton_additions/client/renderer/dice/FrozenDiceRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/sennaton/sennaton_additions/client/renderer/dice/FrozenDiceRenderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/sennaton/sennaton_additions/client/renderer/dice/HauntedDiceRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/sennaton/sennaton_additions/client/renderer/dice/HauntedDiceRenderer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/sennaton/sennaton_additions/client/renderer/dice/WarpedDiceRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/sennaton/sennaton_additions/client/renderer/dice/WarpedDiceRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/GlowLayer.class.uniqueId2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/NynaRenderer$1.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/NynaRenderer$2.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/NynaRenderer.class.uniqueId3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/sennaton_additions/sounds.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/sennaton_additions/sounds.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/sennaton_additions/textures/entity/nyna/frozen_dice_glowmask.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/sennaton_additions/textures/entity/nyna/frozen_dice_glowmask.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/2024-06-24-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-24-1.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/2024-06-24-10.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-24-10.log.gz" afterDir="false" />
@@ -118,6 +228,9 @@
       <change beforePath="$PROJECT_DIR$/run/logs/2024-06-24-24.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-24-24.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/2024-06-24-25.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-24-25.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/2024-06-24-26.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-24-26.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-24-27.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-24-27.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-24-28.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-24-28.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2024-06-24-29.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-24-29.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/2024-06-24-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-24-3.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/2024-06-24-4.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-24-4.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/2024-06-24-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-06-24-5.log.gz" afterDir="false" />
@@ -135,6 +248,9 @@
       <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/DIM-1/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/DIM-1/data/raids.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/DIM-1/entities/r.3.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/DIM-1/entities/r.3.0.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/DIM-1/entities/r.3.1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/DIM-1/entities/r.3.1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/DIM-1/entities/r.4.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/DIM-1/entities/r.4.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/DIM-1/entities/r.4.1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/DIM-1/entities/r.4.1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/DIM-1/poi/r.3.1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/DIM-1/poi/r.3.1.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/DIM-1/region/r.2.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/DIM-1/region/r.2.0.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/DIM-1/region/r.2.1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/DIM-1/region/r.2.1.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/DIM-1/region/r.3.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/DIM-1/region/r.3.0.mca" afterDir="false" />
@@ -142,9 +258,23 @@
       <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/DIM-1/region/r.4.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/DIM-1/region/r.4.0.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/DIM-1/region/r.4.1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/DIM-1/region/r.4.1.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/DIM1/data/raids_end.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/DIM1/data/raids_end.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/advancements/380df991-f603-344c-a090-369bad2a924a.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/advancements/380df991-f603-344c-a090-369bad2a924a.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/data/raids.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/data/random_sequences.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/data/random_sequences.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/data/raids.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/entities/r.1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/entities/r.1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/entities/r.1.1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/entities/r.1.1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/entities/r.2.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/entities/r.2.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/entities/r.2.1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/entities/r.2.1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/poi/r.1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/poi/r.1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.0.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.0.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.0.1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.0.1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.1.1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.1.1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.2.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.2.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.2.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.2.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.2.1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/dimensions/sennaton_additions/floating_islands/region/r.2.1.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/entities/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/entities/r.-1.0.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/entities/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/entities/r.0.0.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/level.dat" afterDir="false" />
@@ -156,9 +286,13 @@
       <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/region/r.-1.1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/region/r.-1.1.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/region/r.0.0.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/region/r.0.1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/region/r.0.1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/region/r.1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/region/r.1.0.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World (2)/stats/380df991-f603-344c-a090-369bad2a924a.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (2)/stats/380df991-f603-344c-a090-369bad2a924a.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/sennaton/sennaton_additions/client/renderer/dice/WarpedDiceRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sennaton/sennaton_additions/client/renderer/dice/WarpedDiceRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sennaton/sennaton_additions/SennatonMob/NynaEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sennaton/sennaton_additions/SennatonMob/NynaEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sennaton/sennaton_additions/Sound/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sennaton/sennaton_additions/Sound/Sound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/sennaton_additions/sounds.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/sennaton_additions/sounds.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/sennaton_additions/textures/entity/nyna/frozen_dice_glowmask.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/sennaton_additions/textures/entity/nyna/frozen_dice_glowmask.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -593,7 +727,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719246208170</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fix textures.">
+      <option name="closed" value="true" />
+      <created>1719250524992</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1719250524992</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

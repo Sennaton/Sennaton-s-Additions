@@ -1,9 +1,6 @@
 
 package org.sennaton.sennaton_additions.SennatonMob;
 
-import com.google.errorprone.annotations.Var;
-import net.minecraft.Util;
-import net.minecraft.core.RegistryAccess;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.tags.EntityTypeTags;
 import net.minecraft.util.RandomSource;
@@ -14,19 +11,12 @@ import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.animal.*;
 import net.minecraft.world.entity.monster.Creeper;
-import net.minecraft.world.entity.projectile.ThrownPotion;
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.Blocks;
 import org.sennaton.sennaton_additions.SennatonMob.Dice.*;
 import org.sennaton.sennaton_additions.SennatonMob.Spawns.NynaSpawnConditions;
-import org.sennaton.sennaton_additions.Sennaton_Additions;
 import software.bernie.geckolib.constant.DefaultAnimations;
 import software.bernie.geckolib.util.GeckoLibUtil;
-import software.bernie.geckolib.core.object.PlayState;
-import software.bernie.geckolib.core.animation.RawAnimation;
-import software.bernie.geckolib.core.animation.AnimationState;
-import software.bernie.geckolib.core.animation.AnimationController;
 import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animatable.GeoEntity;
@@ -54,10 +44,6 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.core.BlockPos;
-
-import java.util.Random;
 
 
 import javax.annotation.Nullable;
@@ -313,19 +299,48 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 		return MobType.UNDEFINED;
 	}
 
-	/*@Override
-	public SoundEvent getAmbi (DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.nyna.hurt"));
-	}*/
+	public SoundEvent getAmbientSound() {
+		ResourceLocation sound = null;
+		switch (this.getVariant())
+		{
+			case NYNA, FRIGID_NYNA ->{
+				sound =  new ResourceLocation("sennaton_additions", "nyna_mew");}
+			case UN_NYNA ->{
+				sound = new ResourceLocation("sennaton_additions", "nyna_un_mew");}
+			case FIREY_NYNA,HAUNTED_NYNA ->{
+				sound = new ResourceLocation("sennaton_additions", "nyna_mews");}
+		}
+		return ForgeRegistries.SOUND_EVENTS.getValue(sound);
+	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.nyna.hurt"));
+		ResourceLocation sound = null;
+		switch (this.getVariant())
+		{
+			case NYNA, FRIGID_NYNA ->{
+				sound =  new ResourceLocation("sennaton_additions", "nyna_hurt");}
+			case UN_NYNA ->{
+				sound = new ResourceLocation("sennaton_additions", "nyna_un_hurt");}
+			case FIREY_NYNA,HAUNTED_NYNA ->{
+				sound = new ResourceLocation("sennaton_additions", "nyna_hurts");}
+        }
+		return ForgeRegistries.SOUND_EVENTS.getValue(sound);
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.nyna.death"));
+		ResourceLocation sound = null;
+		switch (this.getVariant())
+		{
+			case NYNA, FRIGID_NYNA ->{
+				sound = new ResourceLocation("sennaton_additions", "nyna_death");}
+			case UN_NYNA ->{
+				sound = new ResourceLocation("sennaton_additions", "nyna_un_death");}
+			case FIREY_NYNA,HAUNTED_NYNA ->{
+				sound = new ResourceLocation("sennaton_additions", "nyna_deaths");}
+		}
+		return ForgeRegistries.SOUND_EVENTS.getValue(sound);
 	}
 
 	@Override

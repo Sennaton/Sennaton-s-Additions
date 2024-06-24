@@ -4,6 +4,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.ai.goal.BreedGoal;
+import net.minecraftforge.common.util.ForgeSoundType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -15,6 +16,14 @@ public class Sound {
             DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, Sennaton_Additions.MODID);
 
     public static final RegistryObject<SoundEvent> NYNA_MEW = registerSoundEvent("nyna_mew");
+    public static final RegistryObject<SoundEvent> NYNA_HURT = registerSoundEvent( "nyna_hurt");
+    public static final RegistryObject<SoundEvent> NYNA_DEATH = registerSoundEvent( "nyna_death");
+    public static final RegistryObject<SoundEvent> NYNA_UN_MEW = registerSoundEvent("nyna_un_mew");
+    public static final RegistryObject<SoundEvent> NYNA_UN_HURT = registerSoundEvent( "nyna_un_hurt");
+    public static final RegistryObject<SoundEvent> NYNA_UN_DEATH = registerSoundEvent( "nyna_un_death");
+    public static final RegistryObject<SoundEvent> NYNA_MEWS = registerSoundEvent("nyna_mews");
+    public static final RegistryObject<SoundEvent> NYNA_HURTS = registerSoundEvent( "nyna_hurts");
+    public static final RegistryObject<SoundEvent> NYNA_DEATHS = registerSoundEvent( "nyna_deaths");
 
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {

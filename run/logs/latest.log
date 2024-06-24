@@ -1,143 +1,121 @@
-[24Jun2024 10:30:22.673] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 5, --assetsDir, /home/sennaton/.gradle/caches/forge_gradle/assets, --gameDir, ., --fml.forgeVersion, 47.3.1, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mixin.config, sennaton_additions.mixins.json]
-[24Jun2024 10:30:22.678] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.11 by Ubuntu; OS Linux arch amd64 version 6.9.4-1-liquorix-amd64
-[24Jun2024 10:30:22.823] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
-[24Jun2024 10:30:22.929] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
-[24Jun2024 10:30:22.997] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
-[24Jun2024 10:30:23.129] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: AMD Radeon Graphics (renoir, LLVM 15.0.7, DRM 3.57, 6.9.4-1-liquorix-amd64) GL version 4.6 (Core Profile) Mesa 23.2.1-1ubuntu3.1~22.04.2, AMD
-[24Jun2024 10:30:23.176] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/home/sennaton/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23116!/ Service=ModLauncher Env=CLIENT
-[24Jun2024 10:30:23.521] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/sennaton/.gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.20.1-47.3.1/b9fa98d5c9fa107169a3390a1c8993d2134fbf54/javafmllanguage-1.20.1-47.3.1.jar is missing mods.toml file
-[24Jun2024 10:30:23.524] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/sennaton/.gradle/caches/modules-2/files-2.1/net.minecraftforge/lowcodelanguage/1.20.1-47.3.1/aaa252b4d4c34d0c02e647d7a2ef3df3bc11d73a/lowcodelanguage-1.20.1-47.3.1.jar is missing mods.toml file
-[24Jun2024 10:30:23.525] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/sennaton/.gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.20.1-47.3.1/1722b26446496b5e686cdf124342e8f7fd33dc91/mclanguage-1.20.1-47.3.1.jar is missing mods.toml file
-[24Jun2024 10:30:23.527] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/sennaton/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.20.1-47.3.1/4ed2bfe4ae3a6c27f587d45f58d648db68d19c00/fmlcore-1.20.1-47.3.1.jar is missing mods.toml file
-[24Jun2024 10:30:23.782] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
-[24Jun2024 10:30:25.861] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[24Jun2024 10:30:25.864] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, /home/sennaton/.gradle/caches/forge_gradle/assets, --assetIndex, 5]
-[24Jun2024 10:30:25.914] [main/WARN] [mixin/]: Reference map 'Sennaton_Additions.refmap.json' for sennaton_additions.mixins.json could not be read. If this is a development environment you can ignore this message
-[24Jun2024 10:30:26.362] [main/INFO] [mixin/]: Remapping refMap geckolib.refmap.json using /Storage/IdeaProjects/Sennaton_Additions/build/createSrgToMcp/output.srg
-[24Jun2024 10:30:31.966] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 188 Datafixer optimizations took 219 milliseconds
-[24Jun2024 10:30:34.562] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/sennaton/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.1_mapped_official_1.20.1/forge-1.20.1-47.3.1_mapped_official_1.20.1-recomp.jar%23181!/assets/.mcassetsroot' uses unexpected schema
-[24Jun2024 10:30:34.563] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/sennaton/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.1_mapped_official_1.20.1/forge-1.20.1-47.3.1_mapped_official_1.20.1-recomp.jar%23181!/data/.mcassetsroot' uses unexpected schema
-[24Jun2024 10:30:34.591] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[24Jun2024 10:30:34.597] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[24Jun2024 10:30:34.785] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.1 build 7
-[24Jun2024 10:30:35.312] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.3.1, for MC 1.20.1 with MCP 20230612.114412
-[24Jun2024 10:30:35.323] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.3.1 Initialized
-[24Jun2024 10:30:37.312] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [sennaton_additions]
-[24Jun2024 10:30:37.987] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources
-[24Jun2024 10:30:38.362] [Worker-Main-3/INFO] [org.sennaton.sennaton_additions.Sennaton_Additions/]: HELLO FROM COMMON SETUP
-[24Jun2024 10:30:38.362] [Worker-Main-3/INFO] [org.sennaton.sennaton_additions.Sennaton_Additions/]: DIRT BLOCK >> minecraft:dirt
-[24Jun2024 10:30:38.363] [Worker-Main-3/INFO] [org.sennaton.sennaton_additions.Sennaton_Additions/]: DIRT BLOCK >> minecraft:dirt
-[24Jun2024 10:30:38.363] [Worker-Main-3/INFO] [org.sennaton.sennaton_additions.Sennaton_Additions/]: The magic number is... 42
-[24Jun2024 10:30:38.367] [Worker-Main-3/INFO] [org.sennaton.sennaton_additions.Sennaton_Additions/]: ITEM >> iron_ingot
-[24Jun2024 10:30:38.562] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[24Jun2024 10:30:38.596] [Worker-Main-2/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.0.06.hex, loading
-[24Jun2024 10:30:38.664] [Worker-Main-4/WARN] [net.minecraft.client.sounds.SoundManager/]: Invalid sounds.json in resourcepack: 'main'
-com.google.gson.JsonSyntaxException: Expected sounds to be a JsonArray, was "sen...ew"
-	at net.minecraft.util.GsonHelper.convertToJsonArray(GsonHelper.java:363) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1-recomp.jar%23181!/:?]
-	at net.minecraft.util.GsonHelper.getAsJsonArray(GsonHelper.java:369) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1-recomp.jar%23181!/:?]
-	at net.minecraft.client.resources.sounds.SoundEventRegistrationSerializer.getSounds(SoundEventRegistrationSerializer.java:34) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1-recomp.jar%23181!/:?]
-	at net.minecraft.client.resources.sounds.SoundEventRegistrationSerializer.deserialize(SoundEventRegistrationSerializer.java:27) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1-recomp.jar%23181!/:?]
-	at net.minecraft.client.resources.sounds.SoundEventRegistrationSerializer.deserialize(SoundEventRegistrationSerializer.java:19) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1-recomp.jar%23181!/:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:76) ~[gson-2.10.jar%23118!/:?]
-	at com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.read(TypeAdapterRuntimeTypeWrapper.java:40) ~[gson-2.10.jar%23118!/:?]
-	at com.google.gson.internal.bind.MapTypeAdapterFactory$Adapter.read(MapTypeAdapterFactory.java:186) ~[gson-2.10.jar%23118!/:?]
-	at com.google.gson.internal.bind.MapTypeAdapterFactory$Adapter.read(MapTypeAdapterFactory.java:144) ~[gson-2.10.jar%23118!/:?]
-	at net.minecraft.util.GsonHelper.fromNullableJson(GsonHelper.java:454) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1-recomp.jar%23181!/:?]
-	at net.minecraft.util.GsonHelper.fromJson(GsonHelper.java:461) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1-recomp.jar%23181!/:?]
-	at net.minecraft.util.GsonHelper.fromJson(GsonHelper.java:484) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1-recomp.jar%23181!/:?]
-	at net.minecraft.client.sounds.SoundManager.prepare(SoundManager.java:76) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1-recomp.jar%23181!/:?]
-	at net.minecraft.client.sounds.SoundManager.prepare(SoundManager.java:41) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1-recomp.jar%23181!/:?]
-	at net.minecraft.server.packs.resources.SimplePreparableReloadListener.lambda$reload$0(SimplePreparableReloadListener.java:10) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1-recomp.jar%23181!/:?]
-	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?]
-	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760) ~[?:?]
-	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373) ~[?:?]
-	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182) ~[?:?]
-	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
-	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
-	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[24Jun2024 10:30:39.172] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 32: 32
-[24Jun2024 10:30:39.173] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 33: 33
-[24Jun2024 10:30:39.173] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 34: 34
-[24Jun2024 10:30:39.173] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 35: 35
-[24Jun2024 10:30:39.173] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 36: 36
-[24Jun2024 10:30:39.173] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 37: 37
-[24Jun2024 10:30:39.173] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 38: 38
-[24Jun2024 10:30:39.173] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 39: 39
-[24Jun2024 10:30:39.173] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 40: 40
-[24Jun2024 10:30:39.173] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 41: 41
-[24Jun2024 10:30:39.173] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 42: 42
-[24Jun2024 10:30:39.173] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 43: 43
-[24Jun2024 10:30:39.173] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 44: 44
-[24Jun2024 10:30:39.173] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 45: 45
-[24Jun2024 10:30:39.173] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 46: 46
-[24Jun2024 10:30:39.175] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 47: 47
-[24Jun2024 10:30:39.176] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 48: 48
-[24Jun2024 10:30:39.176] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 49: 49
-[24Jun2024 10:30:39.245] [Worker-Main-4/INFO] [org.sennaton.sennaton_additions.Sennaton_Additions/]: HELLO FROM CLIENT SETUP
-[24Jun2024 10:30:39.245] [Worker-Main-4/INFO] [org.sennaton.sennaton_additions.Sennaton_Additions/]: MINECRAFT NAME >> Dev
-[24Jun2024 10:30:39.725] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: AHEAD Current: 47.3.1 Target: null
-[24Jun2024 10:30:43.314] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
-[24Jun2024 10:30:43.314] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[24Jun2024 10:30:43.320] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: sennaton_additions:nyna_mew
-[24Jun2024 10:30:43.440] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device JACK Default
-[24Jun2024 10:30:43.441] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
-[24Jun2024 10:30:43.812] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/blocks.png-atlas
-[24Jun2024 10:30:43.851] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[24Jun2024 10:30:43.853] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[24Jun2024 10:30:43.855] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[24Jun2024 10:30:43.856] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
-[24Jun2024 10:30:43.868] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
-[24Jun2024 10:30:43.869] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[24Jun2024 10:30:43.869] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[24Jun2024 10:30:43.871] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[24Jun2024 10:30:44.054] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[24Jun2024 10:30:44.133] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[24Jun2024 10:30:44.137] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[24Jun2024 10:30:44.138] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[24Jun2024 10:30:44.418] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
-[24Jun2024 10:30:47.688] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
-[24Jun2024 10:30:49.044] [Render thread/ERROR] [net.minecraft.Util/]: Invalid path in pack: sennaton_additions:dimension/Credits.md, ignoring
-[24Jun2024 10:30:49.912] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 7 recipes
-[24Jun2024 10:30:50.059] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 1271 advancements
-[24Jun2024 10:30:50.578] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.20.1
-[24Jun2024 10:30:50.578] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
-[24Jun2024 10:30:52.755] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[24Jun2024 10:30:57.834] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[24Jun2024 10:30:57.887] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[24Jun2024 10:30:57.905] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[24Jun2024 10:30:57.922] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[24Jun2024 10:30:57.940] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[24Jun2024 10:30:57.958] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[24Jun2024 10:30:57.976] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[24Jun2024 10:30:57.993] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[24Jun2024 10:30:57.994] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[24Jun2024 10:30:58.011] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[24Jun2024 10:30:58.011] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[24Jun2024 10:30:58.275] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[24Jun2024 10:30:58.774] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 38%
-[24Jun2024 10:30:59.156] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
-[24Jun2024 10:30:59.157] [Server thread/INFO] [org.sennaton.sennaton_additions.Sennaton_Additions/]: HELLO from server starting
-[24Jun2024 10:30:59.162] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 6392 ms
-[24Jun2024 10:30:59.311] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
-[24Jun2024 10:30:59.316] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
-[24Jun2024 10:30:59.392] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
-[24Jun2024 10:31:00.026] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
-[24Jun2024 10:31:00.102] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:a12c5a16] logged in with entity id 51 at (1772.6714099710694, 44.0, 542.3627738703814)
-[24Jun2024 10:31:00.177] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
-[24Jun2024 10:31:00.702] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 129 advancements
-[24Jun2024 10:31:37.614] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
-[24Jun2024 10:31:37.625] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
-[24Jun2024 10:31:37.625] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
-[24Jun2024 10:31:37.641] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
-[24Jun2024 10:31:37.693] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
-[24Jun2024 10:31:37.693] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
-[24Jun2024 10:31:37.694] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
-[24Jun2024 10:31:38.251] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[24Jun2024 10:31:38.274] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[24Jun2024 10:31:38.275] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[24Jun2024 10:31:38.337] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/sennaton_additions:floating_islands
-[24Jun2024 10:31:38.373] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (New World (2)): All chunks are saved
-[24Jun2024 10:31:38.373] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[24Jun2024 10:31:38.373] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[24Jun2024 10:31:38.373] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (floating_islands): All chunks are saved
-[24Jun2024 10:31:38.373] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[24Jun2024 12:30:39.302] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 5, --assetsDir, /home/sennaton/.gradle/caches/forge_gradle/assets, --gameDir, ., --fml.forgeVersion, 47.3.1, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mixin.config, sennaton_additions.mixins.json]
+[24Jun2024 12:30:39.306] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.11 by Ubuntu; OS Linux arch amd64 version 6.9.4-1-liquorix-amd64
+[24Jun2024 12:30:39.455] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[24Jun2024 12:30:39.574] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[24Jun2024 12:30:39.667] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[24Jun2024 12:30:39.783] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: AMD Radeon Graphics (renoir, LLVM 15.0.7, DRM 3.57, 6.9.4-1-liquorix-amd64) GL version 4.6 (Core Profile) Mesa 23.2.1-1ubuntu3.1~22.04.2, AMD
+[24Jun2024 12:30:39.821] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/home/sennaton/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23116!/ Service=ModLauncher Env=CLIENT
+[24Jun2024 12:30:40.384] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/sennaton/.gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.20.1-47.3.1/b9fa98d5c9fa107169a3390a1c8993d2134fbf54/javafmllanguage-1.20.1-47.3.1.jar is missing mods.toml file
+[24Jun2024 12:30:40.388] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/sennaton/.gradle/caches/modules-2/files-2.1/net.minecraftforge/lowcodelanguage/1.20.1-47.3.1/aaa252b4d4c34d0c02e647d7a2ef3df3bc11d73a/lowcodelanguage-1.20.1-47.3.1.jar is missing mods.toml file
+[24Jun2024 12:30:40.399] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/sennaton/.gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.20.1-47.3.1/1722b26446496b5e686cdf124342e8f7fd33dc91/mclanguage-1.20.1-47.3.1.jar is missing mods.toml file
+[24Jun2024 12:30:40.402] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/sennaton/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.20.1-47.3.1/4ed2bfe4ae3a6c27f587d45f58d648db68d19c00/fmlcore-1.20.1-47.3.1.jar is missing mods.toml file
+[24Jun2024 12:30:41.204] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
+[24Jun2024 12:30:43.488] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[24Jun2024 12:30:43.489] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, /home/sennaton/.gradle/caches/forge_gradle/assets, --assetIndex, 5]
+[24Jun2024 12:30:43.552] [main/WARN] [mixin/]: Reference map 'Sennaton_Additions.refmap.json' for sennaton_additions.mixins.json could not be read. If this is a development environment you can ignore this message
+[24Jun2024 12:30:43.971] [main/INFO] [mixin/]: Remapping refMap geckolib.refmap.json using /Storage/IdeaProjects/Sennaton_Additions/build/createSrgToMcp/output.srg
+[24Jun2024 12:30:49.996] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 188 Datafixer optimizations took 212 milliseconds
+[24Jun2024 12:30:52.565] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/sennaton/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.1_mapped_official_1.20.1/forge-1.20.1-47.3.1_mapped_official_1.20.1-recomp.jar%23181!/assets/.mcassetsroot' uses unexpected schema
+[24Jun2024 12:30:52.565] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/sennaton/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.1_mapped_official_1.20.1/forge-1.20.1-47.3.1_mapped_official_1.20.1-recomp.jar%23181!/data/.mcassetsroot' uses unexpected schema
+[24Jun2024 12:30:52.586] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[24Jun2024 12:30:52.591] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[24Jun2024 12:30:52.789] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.1 build 7
+[24Jun2024 12:30:53.385] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.3.1, for MC 1.20.1 with MCP 20230612.114412
+[24Jun2024 12:30:53.398] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.3.1 Initialized
+[24Jun2024 12:30:55.466] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [sennaton_additions]
+[24Jun2024 12:30:57.165] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources
+[24Jun2024 12:30:57.546] [Worker-Main-4/INFO] [org.sennaton.sennaton_additions.Sennaton_Additions/]: HELLO FROM COMMON SETUP
+[24Jun2024 12:30:57.547] [Worker-Main-4/INFO] [org.sennaton.sennaton_additions.Sennaton_Additions/]: DIRT BLOCK >> minecraft:dirt
+[24Jun2024 12:30:57.547] [Worker-Main-4/INFO] [org.sennaton.sennaton_additions.Sennaton_Additions/]: DIRT BLOCK >> minecraft:dirt
+[24Jun2024 12:30:57.547] [Worker-Main-4/INFO] [org.sennaton.sennaton_additions.Sennaton_Additions/]: The magic number is... 42
+[24Jun2024 12:30:57.549] [Worker-Main-4/INFO] [org.sennaton.sennaton_additions.Sennaton_Additions/]: ITEM >> iron_ingot
+[24Jun2024 12:30:57.629] [Worker-Main-1/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.0.06.hex, loading
+[24Jun2024 12:30:57.631] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[24Jun2024 12:30:58.000] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 32: 32
+[24Jun2024 12:30:58.001] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 33: 33
+[24Jun2024 12:30:58.001] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 34: 34
+[24Jun2024 12:30:58.001] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 35: 35
+[24Jun2024 12:30:58.001] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 36: 36
+[24Jun2024 12:30:58.001] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 37: 37
+[24Jun2024 12:30:58.001] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 38: 38
+[24Jun2024 12:30:58.001] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 39: 39
+[24Jun2024 12:30:58.001] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 40: 40
+[24Jun2024 12:30:58.001] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 41: 41
+[24Jun2024 12:30:58.001] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 42: 42
+[24Jun2024 12:30:58.001] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 43: 43
+[24Jun2024 12:30:58.001] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 44: 44
+[24Jun2024 12:30:58.001] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 45: 45
+[24Jun2024 12:30:58.001] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 46: 46
+[24Jun2024 12:30:58.001] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 47: 47
+[24Jun2024 12:30:58.001] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 48: 48
+[24Jun2024 12:30:58.001] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Invalid frame index on sprite sennaton_additions:block/floating_portal frame 49: 49
+[24Jun2024 12:30:58.480] [Worker-Main-4/INFO] [org.sennaton.sennaton_additions.Sennaton_Additions/]: HELLO FROM CLIENT SETUP
+[24Jun2024 12:30:58.481] [Worker-Main-4/INFO] [org.sennaton.sennaton_additions.Sennaton_Additions/]: MINECRAFT NAME >> Dev
+[24Jun2024 12:30:58.630] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: AHEAD Current: 47.3.1 Target: null
+[24Jun2024 12:31:01.738] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
+[24Jun2024 12:31:01.738] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[24Jun2024 12:31:01.816] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device JACK Default
+[24Jun2024 12:31:01.817] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[24Jun2024 12:31:02.050] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/blocks.png-atlas
+[24Jun2024 12:31:02.131] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[24Jun2024 12:31:02.132] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[24Jun2024 12:31:02.136] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[24Jun2024 12:31:02.137] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[24Jun2024 12:31:02.160] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[24Jun2024 12:31:02.166] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[24Jun2024 12:31:02.167] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[24Jun2024 12:31:02.168] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[24Jun2024 12:31:02.473] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[24Jun2024 12:31:02.592] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[24Jun2024 12:31:02.602] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[24Jun2024 12:31:02.603] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[24Jun2024 12:31:02.933] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
+[24Jun2024 12:31:12.201] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
+[24Jun2024 12:31:13.502] [Render thread/ERROR] [net.minecraft.Util/]: Invalid path in pack: sennaton_additions:dimension/Credits.md, ignoring
+[24Jun2024 12:31:14.454] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 7 recipes
+[24Jun2024 12:31:14.615] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 1271 advancements
+[24Jun2024 12:31:15.137] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.20.1
+[24Jun2024 12:31:15.138] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[24Jun2024 12:31:18.780] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[24Jun2024 12:31:23.263] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[24Jun2024 12:31:23.264] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[24Jun2024 12:31:23.265] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[24Jun2024 12:31:23.265] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[24Jun2024 12:31:23.265] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[24Jun2024 12:31:23.265] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[24Jun2024 12:31:23.265] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[24Jun2024 12:31:23.265] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[24Jun2024 12:31:23.265] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[24Jun2024 12:31:23.303] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[24Jun2024 12:31:23.798] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 9%
+[24Jun2024 12:31:24.300] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 80%
+[24Jun2024 12:31:24.456] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 5669 ms
+[24Jun2024 12:31:24.462] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[24Jun2024 12:31:24.462] [Server thread/INFO] [org.sennaton.sennaton_additions.Sennaton_Additions/]: HELLO from server starting
+[24Jun2024 12:31:24.627] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
+[24Jun2024 12:31:24.633] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
+[24Jun2024 12:31:24.717] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
+[24Jun2024 12:31:25.272] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
+[24Jun2024 12:31:25.553] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:9b6a455a] logged in with entity id 51 at (14134.760562560921, 71.36862644649366, 4340.298450475477)
+[24Jun2024 12:31:25.836] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[24Jun2024 12:31:27.099] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 146 advancements
+[24Jun2024 12:31:28.154] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 2842ms or 56 ticks behind
+[24Jun2024 12:32:05.257] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Set the time to 18000]
+[24Jun2024 12:32:05.267] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Set the time to 18000
+[24Jun2024 12:33:27.114] [Render thread/WARN] [net.minecraft.client.multiplayer.ClientPacketListener/]: Received passengers for unknown entity
+[24Jun2024 12:33:34.258] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[24Jun2024 12:33:34.276] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
+[24Jun2024 12:33:34.276] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[24Jun2024 12:33:34.283] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
+[24Jun2024 12:33:34.331] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[24Jun2024 12:33:34.331] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[24Jun2024 12:33:34.331] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[24Jun2024 12:33:34.782] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[24Jun2024 12:33:34.812] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/sennaton_additions:floating_islands
+[24Jun2024 12:33:34.812] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[24Jun2024 12:33:34.813] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[24Jun2024 12:33:34.908] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (New World (2)): All chunks are saved
+[24Jun2024 12:33:34.909] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (floating_islands): All chunks are saved
+[24Jun2024 12:33:34.909] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[24Jun2024 12:33:34.909] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[24Jun2024 12:33:34.909] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved

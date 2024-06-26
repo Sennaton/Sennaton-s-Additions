@@ -199,19 +199,18 @@ public class NynaEntity extends PathfinderMob implements   RangedAttackMob, GeoE
 		this.goalSelector.addGoal(0, new AvoidEntityGoal<>(this, Creeper.class, 6.0F, 1.0D, 1.2D));
 		this.targetSelector.addGoal(3, new HurtByTargetGoal(this, NynaEntity.class).setAlertOthers());
 		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Monster.class, true));
-		this.targetSelector.addGoal(4,	new NearestAttackableTargetGoal(this, TropicalFish.class, true, false));
-		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, Cod.class, true, false));
-		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, Salmon.class, true, false));
+		this.targetSelector.addGoal(4,	new NearestAttackableTargetGoal<>(this, TropicalFish.class, true, false));
+		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Cod.class, true, false));
+		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal<>(this, Salmon.class, true, false));
 		this.goalSelector.addGoal(7, new OpenDoorGoal(this, true));
 		this.goalSelector.addGoal(8, new MoveBackToVillageGoal(this, 0.6, false));
 		this.goalSelector.addGoal(9, new RandomStrollGoal(this, 1));
 		this.goalSelector.addGoal(10, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(11, new NynaFloatGoal(this));
-		;
 	}
 
 
-	public class NynaFloatGoal extends FloatGoal {
+	public static class NynaFloatGoal extends FloatGoal {
 		private final NynaEntity mob;
 
 		public NynaFloatGoal(NynaEntity mob) {
@@ -418,10 +417,12 @@ public class NynaEntity extends PathfinderMob implements   RangedAttackMob, GeoE
 	@Override
 	public void readAdditionalSaveData(CompoundTag tag) {
 		super.readAdditionalSaveData(tag);
-		variant = NynaVariant.get(tag.getString("variant"));
+		if (tag.getString("variant") != "")
+			variant = NynaVariant.get(tag.getString("variant"));
+		else variant =NynaVariant.NYNA;
 		if (variant != null) {
 			this.setVariant(variant);
-		}
+		} else this.setVariant(NynaVariant.NYNA);
 		//this.entityData.set(DATA_ID_TYPE_VARIANT, tag.getInt("Variant"));
 	}
 

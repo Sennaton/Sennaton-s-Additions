@@ -135,6 +135,9 @@ public class Sennaton_Additions {
             event.accept(SennatonItems.SHARPENED_CRYSTAL);
             event.accept(SennatonItems.HARDENED_DIAMOND);
         }
+        if (event.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
+            event.accept(SennatonItems.NYNA_SPAWN_EGG);
+        }
     }
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent

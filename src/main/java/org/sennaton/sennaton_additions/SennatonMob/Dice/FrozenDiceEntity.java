@@ -65,6 +65,11 @@ public class FrozenDiceEntity extends LoadedDiceEntity {
     }
 
     @Override
+    protected float getWaterInertia() {
+        return 1F;
+    }
+
+    @Override
     protected void doPostHurtEffects(LivingEntity pLiving) {
         super.doPostHurtEffects(pLiving);
         Entity entity = this.getEffectSource();

@@ -14,6 +14,13 @@
   "item.sennaton_additions.wrapped_coal": "Wrapped Coal",
   "item.sennaton_additions.nyna_spawn_egg": "Nyna Spawn Egg",
   "block.sennaton_additions.floating_portal": "Portal",
-  "nyna_mew": "Nyna Mews"
-
+  "nyna.mew": "Nyna mews",
+  "nyna.hurt": "Nyna hurts",
+  "nyna.death": "Nyna dies",
+  "nyna.un_mew": "swem anyN",
+  "nyna.un_hurt": "struH anyN",
+  "nyna.un_death": "seid anyN",
+  "nyna.mews": "§4Nyna mews",
+  "nyna.hurts": "§4Nyna hurts",
+  "nyna.deaths": "§4Nyna dies"
 }

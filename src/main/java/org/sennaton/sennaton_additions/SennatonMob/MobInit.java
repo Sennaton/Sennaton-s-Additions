@@ -36,7 +36,7 @@ public class MobInit {
             EntityType.Builder.<HauntedDiceEntity>of(HauntedDiceEntity::new, MobCategory.MISC).setCustomClientFactory(HauntedDiceEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
     private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
-        return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
+        return REGISTRY.register(registryname, () -> entityTypeBuilder.build(registryname));
     }
 
 

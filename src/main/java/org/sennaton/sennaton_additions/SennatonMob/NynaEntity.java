@@ -7,16 +7,20 @@ import net.minecraft.tags.FluidTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffectUtil;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.goal.*;
+import net.minecraft.world.entity.ai.navigation.GroundPathNavigation;
 import net.minecraft.world.entity.animal.*;
 import net.minecraft.world.entity.monster.Creeper;
+import net.minecraft.world.entity.npc.WanderingTrader;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.ForgeMod;
 import net.minecraftforge.common.extensions.IForgeLivingEntity;
+import org.apache.logging.log4j.core.appender.AbstractFileAppender;
 import org.sennaton.sennaton_additions.SennatonMob.Dice.*;
 import org.sennaton.sennaton_additions.SennatonMob.Spawns.NynaSpawnConditions;
 import software.bernie.geckolib.constant.DefaultAnimations;
@@ -56,11 +60,12 @@ import javax.annotation.Nullable;
 import java.time.LocalDate;
 import java.time.temporal.ChronoField;
 import java.util.EnumSet;
+import net.minecraft.world.entity.npc.Villager;
 
 import static org.sennaton.sennaton_additions.SennatonMob.Spawns.NynaSpawnConditions.BiomeType;
 
 
-public class NynaEntity extends PathfinderMob implements   RangedAttackMob, GeoEntity {
+public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(NynaEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(NynaEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(NynaEntity.class, EntityDataSerializers.STRING);
@@ -74,6 +79,8 @@ public class NynaEntity extends PathfinderMob implements   RangedAttackMob, GeoE
 			SynchedEntityData.defineId(NynaEntity.class, EntityDataSerializers.INT);
 
 
+
+
 	@Override
 	public double getBoneResetTime() {
 		return 4;
@@ -85,6 +92,8 @@ public class NynaEntity extends PathfinderMob implements   RangedAttackMob, GeoE
 
 	public NynaVariant variant;
 
+	public GroundPathNavigation nav;
+	public GroundPathNavigation nav2;
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor p_34297_, DifficultyInstance p_34298_, MobSpawnType p_34299_, @Nullable SpawnGroupData p_34300_, @Nullable CompoundTag p_34301_) {
 		RandomSource randomsource = p_34297_.getRandom();
 		float f = p_34298_.getSpecialMultiplier();
@@ -110,8 +119,14 @@ public class NynaEntity extends PathfinderMob implements   RangedAttackMob, GeoE
 					this.setVariant(NynaVariant.FIREY_NYNA);
 			case "Haunting" ->
 					this.setVariant(NynaVariant.HAUNTED_NYNA);
-		}
-
+			}
+		nav= new GroundPathNavigation(this, (Level) p_34297_);
+		nav.setCanOpenDoors(true);
+		nav.setCanPassDoors(true);
+		nav2= new GroundPathNavigation(this, (Level) p_34297_);
+		nav2.setCanOpenDoors(true);
+		nav2.setCanPassDoors(true);
+		this.navigation = nav;
 
 
 
@@ -134,6 +149,60 @@ public class NynaEntity extends PathfinderMob implements   RangedAttackMob, GeoE
 		return (SpawnGroupData)p_34300_;
 	}
 
+	public SpawnGroupData finalizeSpawn(ServerLevelAccessor p_34297_, DifficultyInstance p_34298_, MobSpawnType p_34299_, @Nullable SpawnGroupData p_34300_, @Nullable CompoundTag p_34301_, @Nullable NynaVariant SpawnVariant) {
+		RandomSource randomsource = p_34297_.getRandom();
+		float f = p_34298_.getSpecialMultiplier();
+		this.setCanPickUpLoot(randomsource.nextFloat() < 0.55F * f);
+		boolean warped = (randomsource.nextInt(100)>75);
+		boolean isDark = NynaSpawnConditions.isDark( p_34297_,this.getX(),  this.getY(),  this.getZ());
+		switch (BiomeType(p_34297_,this.getX(),  this.getY(),  this.getZ())){
+			case "Overworld" -> {
+				if (warped || !isDark){
+					this.setVariant(NynaVariant.UN_NYNA);}
+				else {
+					this.setVariant(NynaVariant.NYNA);}
+			}
+			case "Cold/Ocean" ->{
+				if (warped || !isDark){
+					this.setVariant(NynaVariant.UN_NYNA);}
+				else {
+					this.setVariant(NynaVariant.FRIGID_NYNA);}
+			}
+			case "End" ->
+					this.setVariant(NynaVariant.UN_NYNA);
+			case "Nether" ->
+					this.setVariant(NynaVariant.FIREY_NYNA);
+			case "Haunting" ->
+					this.setVariant(NynaVariant.HAUNTED_NYNA);
+		}
+		nav= new GroundPathNavigation(this, (Level) p_34297_);
+		nav.setCanOpenDoors(true);
+		nav.setCanPassDoors(true);
+		nav2= new GroundPathNavigation(this, (Level) p_34297_);
+		nav2.setCanOpenDoors(true);
+		nav2.setCanPassDoors(true);
+		this.navigation = nav;
+
+
+
+
+
+		this.populateDefaultEquipmentSlots(randomsource, p_34298_);
+		this.populateDefaultEquipmentEnchantments(randomsource, p_34298_);
+
+
+		if (this.getItemBySlot(EquipmentSlot.HEAD).isEmpty()) {
+			LocalDate localdate = LocalDate.now();
+			int i = localdate.get(ChronoField.DAY_OF_MONTH);
+			int j = localdate.get(ChronoField.MONTH_OF_YEAR);
+			if (j == 10 && i == 31 && randomsource.nextFloat() < 0.25F) {
+				this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(randomsource.nextFloat() < 0.1F ? Blocks.JACK_O_LANTERN : Blocks.CARVED_PUMPKIN));
+				this.armorDropChances[EquipmentSlot.HEAD.getIndex()] = 0.0F;
+			}
+		}
+
+		return (SpawnGroupData)p_34300_;
+	}
 
 
 	public NynaEntity(EntityType<NynaEntity> type, Level world) {
@@ -141,6 +210,11 @@ public class NynaEntity extends PathfinderMob implements   RangedAttackMob, GeoE
 		xpReward = 0;
 		setNoAi(false);
 		setMaxUpStep(0.6f);
+	}
+
+	@Override
+	public int getCurrentSwingDuration() {
+		return 12;
 	}
 
 	@Override
@@ -202,7 +276,7 @@ public class NynaEntity extends PathfinderMob implements   RangedAttackMob, GeoE
 		this.targetSelector.addGoal(4,	new NearestAttackableTargetGoal<>(this, TropicalFish.class, true, false));
 		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Cod.class, true, false));
 		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal<>(this, Salmon.class, true, false));
-		this.goalSelector.addGoal(7, new OpenDoorGoal(this, true));
+		this.goalSelector.addGoal(2, new OpenDoorGoal(this, true));
 		this.goalSelector.addGoal(8, new MoveBackToVillageGoal(this, 0.6, false));
 		this.goalSelector.addGoal(9, new RandomStrollGoal(this, 1));
 		this.goalSelector.addGoal(10, new RandomLookAroundGoal(this));
@@ -296,6 +370,9 @@ public class NynaEntity extends PathfinderMob implements   RangedAttackMob, GeoE
 		public void tick() {
 			double d0 = this.mob.distanceToSqr(this.target.getX(), this.target.getY(), this.target.getZ());
 			boolean flag = this.mob.getSensing().hasLineOfSight(this.target);
+			//if (this.mob.isInFluidType());
+			//	navigation =nav;
+
 			if (flag) {
 				++this.seeTime;
 			} else {
@@ -417,9 +494,9 @@ public class NynaEntity extends PathfinderMob implements   RangedAttackMob, GeoE
 	@Override
 	public void readAdditionalSaveData(CompoundTag tag) {
 		super.readAdditionalSaveData(tag);
-		if (tag.getString("variant") != "")
+		if (tag.getString("variant") != "") {
 			variant = NynaVariant.get(tag.getString("variant"));
-		else variant =NynaVariant.NYNA;
+		}
 		if (variant != null) {
 			this.setVariant(variant);
 		} else this.setVariant(NynaVariant.NYNA);
@@ -456,6 +533,9 @@ public class NynaEntity extends PathfinderMob implements   RangedAttackMob, GeoE
 		}
 
 	}
+
+
+
 
 	@Override
 	public void aiStep() {
@@ -506,7 +586,7 @@ public class NynaEntity extends PathfinderMob implements   RangedAttackMob, GeoE
 	@Override
 	public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
 		controllers.add(DefaultAnimations.genericWalkIdleController(this));
-		controllers.add(DefaultAnimations.genericAttackAnimation(this, RawAnimation.begin().thenPlay("nyna.attack")));
+		controllers.add(DefaultAnimations.genericAttackAnimation(this, DefaultAnimations.ATTACK_STRIKE));
 
 		//data.add(new AnimationController<>(this, "movement", 4, this::movementPredicate));
 		DefaultAnimations.genericLivingController(this);

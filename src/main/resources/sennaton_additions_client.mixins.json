@@ -3,7 +3,7 @@
   "minVersion": "0.8",
   "package": "org.sennaton.sennaton_additions.mixin",
   "compatibilityLevel": "JAVA_17",
-  "refmap": "Sennaton_Additions.refmap.json",
+  ///"refmap": "Sennaton_Additions.refmap.json",
   "mixins": [
   ],
   "client": [

@@ -1,5 +1,5 @@
 
-package org.sennaton.sennaton_additions.world.teleporter;
+/*package org.sennaton.sennaton_additions.world.teleporter;
 
 import net.minecraftforge.registries.RegisterEvent;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -146,7 +146,7 @@ public class FloatingTeleporter implements ITeleporter {
 			for (int i3 = -1; i3 < 2; ++i3) {
 				for (int j3 = 0; j3 < 2; ++j3) {
 					for (int k3 = -1; k3 < 3; ++k3) {
-						BlockState blockstate1 = k3 < 0 ? Blocks.CHISELED_STONE_BRICKS.defaultBlockState() : Blocks.AIR.defaultBlockState();
+						BlockState blockstate1 = k3 < 0 ? Blocks.CHISELED_STONE_BRICKS.defaultBlockState() : (Blocks.AIR.defaultBlockState());
 						blockpos$mutableblockpos.setWithOffset(blockpos, j3 * direction.getStepX() + i3 * direction1.getStepX(), k3, j3 * direction.getStepZ() + i3 * direction1.getStepZ());
 						this.level.setBlockAndUpdate(blockpos$mutableblockpos, blockstate1);
 					}
@@ -249,3 +249,4 @@ public class FloatingTeleporter implements ITeleporter {
 		return blockstate.canBeReplaced() && blockstate.getFluidState().isEmpty();
 	}
 }
+*/

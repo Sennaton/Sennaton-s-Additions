@@ -1,9 +1,7 @@
 package org.sennaton.sennaton_additions.Tags;
 
-import com.mojang.datafixers.types.templates.Tag;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BiomeTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.biome.Biome;
 import org.sennaton.sennaton_additions.Sennaton_Additions;

@@ -1,14 +1,10 @@
 
-package org.sennaton.sennaton_additions.client.renderer;
+package org.sennaton.sennaton_additions.SennatonMob;
 
 import net.minecraft.client.renderer.RenderType;
-import org.sennaton.sennaton_additions.SennatonMob.NynaEntity;
-import org.sennaton.sennaton_additions.SennatonMob.model.NynaModel;
 import software.bernie.geckolib.cache.texture.AutoGlowingTexture;
 import software.bernie.geckolib.renderer.GeoRenderer;
 import software.bernie.geckolib.renderer.layer.AutoGlowingGeoLayer;
-
-import static com.ibm.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
 public class GlowLayer extends AutoGlowingGeoLayer<NynaEntity>{
 

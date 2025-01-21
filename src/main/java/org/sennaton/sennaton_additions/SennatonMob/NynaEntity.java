@@ -1,67 +1,61 @@
 
 package org.sennaton.sennaton_additions.SennatonMob;
 
+import com.mojang.logging.LogUtils;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.tags.EntityTypeTags;
 import net.minecraft.tags.FluidTags;
+import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.DifficultyInstance;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffectUtil;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.*;
-import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeMap;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.TargetGoal;
 import net.minecraft.world.entity.ai.navigation.GroundPathNavigation;
-import net.minecraft.world.entity.animal.*;
+import net.minecraft.world.entity.ai.navigation.WaterBoundPathNavigation;
+import net.minecraft.world.entity.animal.Cod;
+import net.minecraft.world.entity.animal.Salmon;
+import net.minecraft.world.entity.animal.TropicalFish;
 import net.minecraft.world.entity.monster.Creeper;
-import net.minecraft.world.entity.npc.WanderingTrader;
+import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.monster.RangedAttackMob;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.common.ForgeMod;
-import net.minecraftforge.common.extensions.IForgeLivingEntity;
-import org.apache.logging.log4j.core.appender.AbstractFileAppender;
+import net.minecraftforge.network.PlayMessages;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.sennaton.sennaton_additions.SennatonMob.Dice.*;
 import org.sennaton.sennaton_additions.SennatonMob.Spawns.NynaSpawnConditions;
-import software.bernie.geckolib.constant.DefaultAnimations;
-import software.bernie.geckolib.core.animation.RawAnimation;
-import software.bernie.geckolib.util.GeckoLibUtil;
-import software.bernie.geckolib.core.animation.AnimatableManager;
-import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animatable.GeoEntity;
-
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.monster.RangedAttackMob;
-import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.damagesource.DamageTypes;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.util.Mth;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.syncher.SynchedEntityData;
-import net.minecraft.network.syncher.EntityDataSerializers;
-import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.network.protocol.game.ClientGamePacketListener;
-import net.minecraft.network.protocol.Packet;
-import net.minecraft.nbt.CompoundTag;
-
-
-import javax.annotation.Nullable;
+import software.bernie.geckolib.constant.DefaultAnimations;
+import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.core.animation.AnimatableManager;
+import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoField;
-import java.util.EnumSet;
-import net.minecraft.world.entity.npc.Villager;
+import java.util.*;
 
+//import static java.lang.VersionProps.print;
 import static org.sennaton.sennaton_additions.SennatonMob.Spawns.NynaSpawnConditions.BiomeType;
 
 
@@ -70,6 +64,7 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(NynaEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(NynaEntity.class, EntityDataSerializers.STRING);
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
+	private AttributeMap attributes;
 	private boolean swinging;
 	private boolean lastloop;
 	private long lastSwing;
@@ -77,8 +72,13 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 	public String nynatype = "nyna";
 	private static final EntityDataAccessor<Integer> DATA_ID_TYPE_VARIANT =
 			SynchedEntityData.defineId(NynaEntity.class, EntityDataSerializers.INT);
+	//private GoalSelector targetSelector;
+	//private GoalSelector goalSelector;
+	public Level levelAccess;
 
-
+	public NynaEntity(PlayMessages.SpawnEntity spawnEntity, Level level) {
+		super(MobInit.get(MobInit.NYNA),level);
+	}
 
 
 	@Override
@@ -86,16 +86,19 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 		return 4;
 	}
 
-	public NynaEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(MobInit.NYNA.get(), world);
-	}
+	//public NynaEntity(PlayMessages.SpawnEntity packet, Level world) {
+	//	this(MobInit.NYNA, world);
+	//}
 
 	public NynaVariant variant;
 
-	public GroundPathNavigation nav;
-	public GroundPathNavigation nav2;
+	public GroundPathNavigation nav = new GroundPathNavigation(this, (Level) this.level());;
+	public WaterBoundPathNavigation nav2 = new WaterBoundPathNavigation(this, (Level) this.level());;
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor p_34297_, DifficultyInstance p_34298_, MobSpawnType p_34299_, @Nullable SpawnGroupData p_34300_, @Nullable CompoundTag p_34301_) {
+		//createAttributes().build();
+		//FabricDefaultAttributeRegistry.register(MobInit.NYNA, createAttributes());
 		RandomSource randomsource = p_34297_.getRandom();
+		p_34300_ = super.finalizeSpawn(p_34297_, p_34298_, p_34299_, p_34300_, p_34301_);
 		float f = p_34298_.getSpecialMultiplier();
 		this.setCanPickUpLoot(randomsource.nextFloat() < 0.55F * f);
 		boolean warped = (randomsource.nextInt(100)>75);
@@ -120,21 +123,12 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 			case "Haunting" ->
 					this.setVariant(NynaVariant.HAUNTED_NYNA);
 			}
-		nav= new GroundPathNavigation(this, (Level) p_34297_);
 		nav.setCanOpenDoors(true);
 		nav.setCanPassDoors(true);
-		nav2= new GroundPathNavigation(this, (Level) p_34297_);
-		nav2.setCanOpenDoors(true);
-		nav2.setCanPassDoors(true);
 		this.navigation = nav;
-
-
-
-
 
 		this.populateDefaultEquipmentSlots(randomsource, p_34298_);
 			this.populateDefaultEquipmentEnchantments(randomsource, p_34298_);
-
 
 		if (this.getItemBySlot(EquipmentSlot.HEAD).isEmpty()) {
 			LocalDate localdate = LocalDate.now();
@@ -151,6 +145,7 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor p_34297_, DifficultyInstance p_34298_, MobSpawnType p_34299_, @Nullable SpawnGroupData p_34300_, @Nullable CompoundTag p_34301_, @Nullable NynaVariant SpawnVariant) {
 		RandomSource randomsource = p_34297_.getRandom();
+		p_34300_ = super.finalizeSpawn(p_34297_, p_34298_, p_34299_, p_34300_, p_34301_);
 		float f = p_34298_.getSpecialMultiplier();
 		this.setCanPickUpLoot(randomsource.nextFloat() < 0.55F * f);
 		boolean warped = (randomsource.nextInt(100)>75);
@@ -178,9 +173,7 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 		nav= new GroundPathNavigation(this, (Level) p_34297_);
 		nav.setCanOpenDoors(true);
 		nav.setCanPassDoors(true);
-		nav2= new GroundPathNavigation(this, (Level) p_34297_);
-		nav2.setCanOpenDoors(true);
-		nav2.setCanPassDoors(true);
+		nav2= new WaterBoundPathNavigation(this, (Level) p_34297_);
 		this.navigation = nav;
 
 
@@ -205,14 +198,27 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 	}
 
 
+
 	public NynaEntity(EntityType<NynaEntity> type, Level world) {
+
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
 		setMaxUpStep(0.6f);
+		levelAccess = world;
+		//registerGoals();
+		//BuiltInRegistries.
 	}
 
 	@Override
+	public @NotNull AttributeMap getAttributes() {
+		if (this.attributes == null){
+			this.attributes = new AttributeMap(NynaEntity.createAttributes().build());   //.put((EntityType)MobInit.NYNA, (AttributeSupplier)NynaEntity.createAttributes().build()).build();
+		}
+		return this.attributes;
+	}
+
+	//@Override
 	public int getCurrentSwingDuration() {
 		return 12;
 	}
@@ -247,18 +253,24 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 		return this.entityData.get(TEXTURE);
 	}
 
-	@Override
-	public Packet<ClientGamePacketListener> getAddEntityPacket() {
-		return NetworkHooks.getEntitySpawningPacket(this);
-	}
+	//@Override
+	//public @NotNull Packet<ClientGamePacketListener> getAddEntityPacket() {
+	//	return NetworkHooks.getEntitySpawningPacket(this);
+	//}
 
 	@Override
 	protected void registerGoals() {
+		//if (levelAccess == null){
+		//	return;
+		//}
+		//super.registerGoals();
+		//if (this.targetSelector == null) this.targetSelector = new GoalSelector(level().getProfilerSupplier());
+		//if (this.goalSelector == null) this.goalSelector = new GoalSelector(level().getProfilerSupplier());
 
-		super.registerGoals();
 		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.3, true) {
 			@Override
-			protected double getAttackReachSqr(LivingEntity entity) {
+			protected double getAttackReachSqr(@NotNull LivingEntity entity) {
+				//LogUtils.getLogger().info("0");
 				return 2;
 			}
 		});
@@ -270,9 +282,10 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 			}
 
 		});
-		this.goalSelector.addGoal(0, new AvoidEntityGoal<>(this, Creeper.class, 6.0F, 1.0D, 1.2D));
+		//this.targetSelector.addGoal(new EntityAIAttackMelee());
+		//this.goalSelector.addGoal(1, new AvoidEntityGoal<>(this, Creeper.class, 6.0F, 1.0D, 1.2D));
 		this.targetSelector.addGoal(3, new HurtByTargetGoal(this, NynaEntity.class).setAlertOthers());
-		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Monster.class, true));
+		this.targetSelector.addGoal(4, new NynaAttackableTargetGoal(this,  Monster.class, new ArrayList<Class>(Arrays.asList(Creeper.class)), true));
 		this.targetSelector.addGoal(4,	new NearestAttackableTargetGoal<>(this, TropicalFish.class, true, false));
 		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Cod.class, true, false));
 		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal<>(this, Salmon.class, true, false));
@@ -281,8 +294,45 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 		this.goalSelector.addGoal(9, new RandomStrollGoal(this, 1));
 		this.goalSelector.addGoal(10, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(11, new NynaFloatGoal(this));
+		///this.goalSelector.addGoal(find);
 	}
 
+	public static class NynaScareGoal extends NearestAttackableTargetGoal {
+		public NynaScareGoal(Mob mob, Class<LivingEntity> targeter, boolean bool) {
+			super(mob, targeter, bool);
+			//(Monster)this.target.targ
+
+		}
+	}
+
+
+
+	public static class NynaAttackableTargetGoal extends NearestAttackableTargetGoal{
+
+		public NynaAttackableTargetGoal(Mob p_26060_, Class p_26061_, ArrayList<Class> ignore, boolean p_26062_) {
+			super(p_26060_, p_26061_, p_26062_);
+			if ( this.target != null){
+				if (ignore.contains(this.target.getClass())) {
+					this.target = null;
+				}
+			}
+			LogUtils.getLogger().info("?");
+		}
+
+		@Override
+		public boolean canUse() {
+			boolean use = false;
+			this.findTarget();
+			if (this.randomInterval > 0 && this.mob.getRandom().nextInt(this.randomInterval) != 0) {
+				use = false;
+			} else if(this.target != null){
+				if (this.target.getClass() == Creeper.class) {use = false;}
+				else{use = true;}
+			}
+			return use;
+		}
+
+	}
 
 	public static class NynaFloatGoal extends FloatGoal {
 		private final NynaEntity mob;
@@ -295,15 +345,16 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 		@Override
 		public boolean canUse()
 			{if (this.mob.getTarget() != null) {
-				return ((this.mob.getTarget().getY()>this.mob.getY()&& this.mob.getVariant() != NynaVariant.FRIGID_NYNA) || this.mob.getAirSupply() < this.mob.getMaxAirSupply() / 2) && (this.mob.isInWater() && this.mob.getFluidHeight(FluidTags.WATER) > this.mob.getFluidJumpThreshold() || this.mob.isInLava() || this.mob.isInFluidType((fluidType, height) -> this.mob.canSwimInFluidType(fluidType) && height > this.mob.getFluidJumpThreshold()));
-			} else return (this.mob.getVariant() != NynaVariant.FRIGID_NYNA || this.mob.getAirSupply() < this.mob.getMaxAirSupply() / 2) && (this.mob.isInWater() && this.mob.getFluidHeight(FluidTags.WATER) > this.mob.getFluidJumpThreshold() || this.mob.isInLava() || this.mob.isInFluidType((fluidType, height) -> this.mob.canSwimInFluidType(fluidType) && height > this.mob.getFluidJumpThreshold()));
+				return ((this.mob.getTarget().getY()>this.mob.getY()&& this.mob.getVariant() != NynaVariant.FRIGID_NYNA) && this.mob.getFluidHeight(FluidTags.WATER) > this.mob.getFluidJumpThreshold()|| this.mob.getAirSupply() < this.mob.getMaxAirSupply() / 2) && (this.mob.isInWater() && this.mob.getFluidHeight(FluidTags.WATER) > this.mob.getFluidJumpThreshold() || this.mob.isInLava() && this.mob.getFluidHeight(FluidTags.LAVA) > this.mob.getFluidJumpThreshold() /*|| this.mob.isInFluidType((fluidType, height) -> this.mob.canSwimInFluidType(fluidType) && height > this.mob.getFluidJumpThreshold())*/);
+			} else return (this.mob.getVariant() != NynaVariant.FRIGID_NYNA && this.mob.getFluidHeight(FluidTags.WATER) > this.mob.getFluidJumpThreshold()|| this.mob.getAirSupply() < this.mob.getMaxAirSupply() / 2) && (this.mob.isInWater() && this.mob.getFluidHeight(FluidTags.WATER) > this.mob.getFluidJumpThreshold() || this.mob.isInLava() && this.mob.getFluidHeight(FluidTags.LAVA) > this.mob.getFluidJumpThreshold()/*|| this.mob.isInFluidType((fluidType, height) -> this.mob.canSwimInFluidType(fluidType) && height > this.mob.getFluidJumpThreshold())*/);
 		}
+
 
 		@Override
 		public boolean canContinueToUse() {
 			if (this.mob.getTarget() != null) {
-				return ((this.mob.getTarget().getY()>this.mob.getY() && this.mob.getVariant() != NynaVariant.FRIGID_NYNA) || this.mob.getAirSupply() < this.mob.getMaxAirSupply() / 2) && (this.mob.isInWater() && this.mob.getFluidHeight(FluidTags.WATER) > this.mob.getFluidJumpThreshold() || this.mob.isInLava() || this.mob.isInFluidType((fluidType, height) -> this.mob.canSwimInFluidType(fluidType) && height > this.mob.getFluidJumpThreshold()));
-			} else return (this.mob.getVariant() != NynaVariant.FRIGID_NYNA || this.mob.getAirSupply() < this.mob.getMaxAirSupply() / 2) && (this.mob.isInWater() && this.mob.getFluidHeight(FluidTags.WATER) > this.mob.getFluidJumpThreshold() || this.mob.isInLava() || this.mob.isInFluidType((fluidType, height) -> this.mob.canSwimInFluidType(fluidType) && height > this.mob.getFluidJumpThreshold()));
+				return ((this.mob.getTarget().getY()>this.mob.getY() && this.mob.getVariant() != NynaVariant.FRIGID_NYNA) || this.mob.getAirSupply() < this.mob.getMaxAirSupply() / 2) && (this.mob.isInWater() && this.mob.getFluidHeight(FluidTags.WATER) > this.mob.getFluidJumpThreshold() || this.mob.isInLava() /*|| this.mob.isInFluidType((fluidType, height) -> this.mob.canSwimInFluidType(fluidType) && height > this.mob.getFluidJumpThreshold())*/);
+			} else return (this.mob.getVariant() != NynaVariant.FRIGID_NYNA || this.mob.getAirSupply() < this.mob.getMaxAirSupply() / 2) && (this.mob.isInWater() && this.mob.getFluidHeight(FluidTags.WATER) > this.mob.getFluidJumpThreshold() || this.mob.isInLava() /*|| this.mob.isInFluidType((fluidType, height) -> this.mob.canSwimInFluidType(fluidType) && height > this.mob.getFluidJumpThreshold())*/);
 
 		}
 	}
@@ -346,8 +397,10 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 			NynaEntity user = (NynaEntity) this.mob;
 			if (livingentity != null && livingentity.isAlive() && (livingentity.distanceTo(this.mob) > 3 && ((!livingentity.isUnderWater()) || user.getVariant() == NynaVariant.FRIGID_NYNA))) {
 				this.target = livingentity;
+				//LogUtils.getLogger().info("0");
 				return true;
 			} else {
+				//LogUtils.getLogger().info("0");
 				return false;
 			}
 		}
@@ -370,8 +423,9 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 		public void tick() {
 			double d0 = this.mob.distanceToSqr(this.target.getX(), this.target.getY(), this.target.getZ());
 			boolean flag = this.mob.getSensing().hasLineOfSight(this.target);
-			//if (this.mob.isInFluidType());
-			//	navigation =nav;
+			if (this.mob.isUnderWater()){
+				navigation =nav2;
+			}else navigation = nav;
 
 			if (flag) {
 				++this.seeTime;
@@ -400,11 +454,25 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 				((NynaEntity) rangedAttackMob).entityData.set(SHOOT, false);
 		}
 	}
-
 	@Override
 	public MobType getMobType() {
 		return MobType.UNDEFINED;
 	}
+
+	//@Override
+	///public @NotNull Iterable<ItemStack> getArmorSlots() {
+	//	return Collections.emptyList();
+	//}
+
+	//@Override
+	//public ItemStack getItemBySlot(EquipmentSlot slot) {
+	//	return new ItemStack(Items.AIR);
+	//}
+
+	//@Override
+	//public void setItemSlot(EquipmentSlot slot, ItemStack stack) {
+
+	//}
 
 	public SoundEvent getAmbientSound() {
 		ResourceLocation sound = null;
@@ -417,11 +485,11 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 			case FIREY_NYNA,HAUNTED_NYNA ->{
 				sound = new ResourceLocation("sennaton_additions", "nyna_mews");}
 		}
-		return ForgeRegistries.SOUND_EVENTS.getValue(sound);
+		return BuiltInRegistries.SOUND_EVENT.get(sound);
 	}
 
 	@Override
-	public SoundEvent getHurtSound(DamageSource ds) {
+	public SoundEvent getHurtSound(@NotNull DamageSource ds) {
 		ResourceLocation sound = null;
 		switch (this.getVariant())
 		{
@@ -432,7 +500,7 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 			case FIREY_NYNA,HAUNTED_NYNA ->{
 				sound = new ResourceLocation("sennaton_additions", "nyna_hurts");}
         }
-		return ForgeRegistries.SOUND_EVENTS.getValue(sound);
+		return BuiltInRegistries.SOUND_EVENT.get(sound);
 	}
 
 	@Override
@@ -447,7 +515,7 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 			case FIREY_NYNA,HAUNTED_NYNA ->{
 				sound = new ResourceLocation("sennaton_additions", "nyna_deaths");}
 		}
-		return ForgeRegistries.SOUND_EVENTS.getValue(sound);
+		return BuiltInRegistries.SOUND_EVENT.get(sound);
 	}
 
 	@Override
@@ -534,13 +602,18 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 
 	}
 
-
+	//FabricDefaultAttributeRegistry .
 
 
 	@Override
 	public void aiStep() {
 		super.aiStep();
 		this.updateSwingTime();
+	}
+
+	@Override
+	public HumanoidArm getMainArm() {
+		return HumanoidArm.RIGHT;
 	}
 
 

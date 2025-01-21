@@ -3,7 +3,7 @@ package org.sennaton.sennaton_additions.SennatonMob.model.Dice;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import org.sennaton.sennaton_additions.SennatonMob.Dice.WarpedDiceEntity;
-import org.sennaton.sennaton_additions.Sennaton_Additions;
+import org.sennaton.sennaton_additions.Sennaton_Additions_Client;
 import software.bernie.geckolib.constant.DataTickets;
 import software.bernie.geckolib.core.animatable.model.CoreGeoBone;
 import software.bernie.geckolib.core.animation.AnimationState;
@@ -13,17 +13,17 @@ import software.bernie.geckolib.model.data.EntityModelData;
 public class WarpedDiceModel extends GeoModel<WarpedDiceEntity> {
 	@Override
 	public ResourceLocation getModelResource(WarpedDiceEntity animatable) {
-		return new ResourceLocation(Sennaton_Additions.MODID, "geo/dice.geo.json");
+		return new ResourceLocation(Sennaton_Additions_Client.MODID, "geo/dice.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(WarpedDiceEntity animatable) {
-		return new ResourceLocation(Sennaton_Additions.MODID, "textures/entity/nyna/warped_dice.png");
+		return new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/nyna/warped_dice.png");
 	}
 
 	@Override
 	public ResourceLocation getAnimationResource(WarpedDiceEntity animatable) {
-		return new ResourceLocation(Sennaton_Additions.MODID, "animations/dice.animation.json");
+		return new ResourceLocation(Sennaton_Additions_Client.MODID, "animations/dice.animation.json");
 	}
 
 	@Override

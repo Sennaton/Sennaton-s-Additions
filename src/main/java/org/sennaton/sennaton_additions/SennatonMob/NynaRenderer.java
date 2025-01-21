@@ -1,41 +1,28 @@
 
-package org.sennaton.sennaton_additions.client.renderer;
+package org.sennaton.sennaton_additions.SennatonMob;
 
 import com.google.common.collect.Maps;
+import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
 import net.minecraft.Util;
 import net.minecraft.client.model.HumanoidModel;
-import net.minecraft.client.model.ZombieModel;
-import net.minecraft.client.model.geom.ModelLayerLocation;
-import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.model.geom.ModelPart;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ShieldItem;
-import org.sennaton.sennaton_additions.SennatonMob.NynaVariant;
-import org.sennaton.sennaton_additions.Sennaton_Additions;
-import com.mojang.blaze3d.vertex.PoseStack;
-import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.resources.ResourceLocation;
-import org.sennaton.sennaton_additions.client.renderer.NynaRenderer;
-import software.bernie.geckolib.GeckoLib;
+import org.sennaton.sennaton_additions.SennatonMob.model.NynaModel;
+import org.sennaton.sennaton_additions.Sennaton_Additions_Client;
 import software.bernie.geckolib.cache.object.BakedGeoModel;
 import software.bernie.geckolib.cache.object.GeoBone;
-import software.bernie.geckolib.cache.texture.AutoGlowingTexture;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
-
-import org.sennaton.sennaton_additions.SennatonMob.model.NynaModel;
-import org.sennaton.sennaton_additions.SennatonMob.NynaEntity;
-import software.bernie.geckolib.renderer.layer.AutoGlowingGeoLayer;
 import software.bernie.geckolib.renderer.layer.BlockAndItemGeoLayer;
 import software.bernie.geckolib.renderer.layer.ItemArmorGeoLayer;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import java.util.Map;
 
 
@@ -55,15 +42,15 @@ public class NynaRenderer extends GeoEntityRenderer<NynaEntity> {
 	public static final Map<NynaVariant, ResourceLocation> LOCATION_BY_VARIANT =
 			Util.make(Maps.newEnumMap(NynaVariant.class), (p_114874_) -> {
 				p_114874_.put(NynaVariant.NYNA,
-						new ResourceLocation(Sennaton_Additions.MODID, "textures/entity/nyna/nyna.png"));
+						new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/nyna/nyna.png"));
 				p_114874_.put(NynaVariant.FRIGID_NYNA,
-						new ResourceLocation(Sennaton_Additions.MODID, "textures/entity/nyna/frigid_nyna.png"));
+						new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/nyna/frigid_nyna.png"));
 				p_114874_.put(NynaVariant.UN_NYNA,
-						new ResourceLocation(Sennaton_Additions.MODID, "textures/entity/nyna/un_nyna.png"));
+						new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/nyna/un_nyna.png"));
 				p_114874_.put(NynaVariant.FIREY_NYNA,
-						new ResourceLocation(Sennaton_Additions.MODID, "textures/entity/nyna/firey_nyna.png"));
+						new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/nyna/firey_nyna.png"));
 				p_114874_.put(NynaVariant.HAUNTED_NYNA,
-						new ResourceLocation(Sennaton_Additions.MODID, "textures/entity/nyna/haunted_nyna.png"));
+						new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/nyna/haunted_nyna.png"));
 
 			});
 
@@ -77,7 +64,7 @@ public class NynaRenderer extends GeoEntityRenderer<NynaEntity> {
 		addRenderLayer(new GlowLayer(this ));
 		// Add some armor rendering
 		addRenderLayer(new ItemArmorGeoLayer<>(this) {
-			@Nullable
+			//@Nullable
 			@Override
 			protected ItemStack getArmorItemForBone(GeoBone bone, NynaEntity animatable) {
 				// Return the items relevant to the bones being rendered for additional rendering
@@ -91,7 +78,7 @@ public class NynaRenderer extends GeoEntityRenderer<NynaEntity> {
 			}
 
 			// Return the equipment slot relevant to the bone we're using
-			@Nonnull
+			//@Nonnull
 			@Override
 			protected EquipmentSlot getEquipmentSlotForBone(GeoBone bone, ItemStack stack, NynaEntity animatable) {
 				return switch (bone.getName()) {
@@ -106,7 +93,7 @@ public class NynaRenderer extends GeoEntityRenderer<NynaEntity> {
 			}
 
 			// Return the ModelPart responsible for the armor pieces we want to render
-			@Nonnull
+			//@Nonnull
 			@Override
 			protected ModelPart getModelPartForBone(GeoBone bone, EquipmentSlot slot, ItemStack stack, NynaEntity animatable, HumanoidModel<?> baseModel) {
 				return switch (bone.getName()) {
@@ -123,7 +110,7 @@ public class NynaRenderer extends GeoEntityRenderer<NynaEntity> {
 
 		// Add some held item rendering
 		addRenderLayer(new BlockAndItemGeoLayer<>(this) {
-			@Nullable
+			//@Nullable
 			@Override
 			protected ItemStack getStackForBone(GeoBone bone, NynaEntity animatable) {
 				// Retrieve the items in the entity's hands for the relevant bone
@@ -184,6 +171,7 @@ public class NynaRenderer extends GeoEntityRenderer<NynaEntity> {
 		if(entity.isBaby()) {
 			poseStack.scale(0.4f, 0.4f, 0.4f);
 		}
+		else poseStack.scale(0.95f, 0.95f, 0.95f);
 
 		super.render(entity, entityYaw, partialTick, poseStack, bufferSource, packedLight);
 	}

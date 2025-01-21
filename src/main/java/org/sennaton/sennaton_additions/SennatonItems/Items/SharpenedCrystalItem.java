@@ -1,23 +1,21 @@
 
 package org.sennaton.sennaton_additions.SennatonItems.Items;
 
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.ai.attributes.Attribute;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EquipmentSlot;
-
-import org.sennaton.sennaton_additions.SennatonItems.Items.Procedures.SharpenedCrystalEntitySwingsItemProcedure;
-
-import com.google.common.collect.Multimap;
 import com.google.common.collect.ImmutableMultimap;
+import com.google.common.collect.Multimap;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
+import org.sennaton.sennaton_additions.SennatonItems.Items.Procedures.SharpenedCrystalEntitySwingsItemProcedure;
 
 public class SharpenedCrystalItem extends Item {
 	public SharpenedCrystalItem() {
-		super(new Properties().stacksTo(64).fireResistant().rarity(Rarity.COMMON));
+		super(new Properties().stacksTo(1).fireResistant().rarity(Rarity.COMMON));
 	}
 
 	@Override

@@ -1,21 +1,17 @@
 
-package org.sennaton.sennaton_additions.client.renderer.dice;
+package org.sennaton.sennaton_additions.SennatonMob.dice;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.sun.jna.platform.unix.Resource;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
 import org.sennaton.sennaton_additions.SennatonMob.Dice.LoadedDiceEntity;
-import org.spongepowered.asm.mixin.Overwrite;
 import software.bernie.geckolib.cache.object.BakedGeoModel;
 import software.bernie.geckolib.cache.texture.AutoGlowingTexture;
-import software.bernie.geckolib.renderer.GeoEntityRenderer;
 import software.bernie.geckolib.renderer.GeoRenderer;
 import software.bernie.geckolib.renderer.layer.AutoGlowingGeoLayer;
-import software.bernie.geckolib.renderer.layer.GeoRenderLayer;
 
 public class GlowLayerDice<T extends LoadedDiceEntity> extends AutoGlowingGeoLayer<T> {
 

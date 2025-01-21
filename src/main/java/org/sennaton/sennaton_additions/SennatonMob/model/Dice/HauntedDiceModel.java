@@ -3,7 +3,7 @@ package org.sennaton.sennaton_additions.SennatonMob.model.Dice;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import org.sennaton.sennaton_additions.SennatonMob.Dice.HauntedDiceEntity;
-import org.sennaton.sennaton_additions.Sennaton_Additions;
+import org.sennaton.sennaton_additions.Sennaton_Additions_Client;
 import software.bernie.geckolib.constant.DataTickets;
 import software.bernie.geckolib.core.animatable.model.CoreGeoBone;
 import software.bernie.geckolib.core.animation.AnimationState;
@@ -13,17 +13,17 @@ import software.bernie.geckolib.model.data.EntityModelData;
 public class HauntedDiceModel extends GeoModel<HauntedDiceEntity> {
 	@Override
 	public ResourceLocation getModelResource(HauntedDiceEntity animatable) {
-		return new ResourceLocation(Sennaton_Additions.MODID, "geo/dice.geo.json");
+		return new ResourceLocation(Sennaton_Additions_Client.MODID, "geo/dice.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(HauntedDiceEntity animatable) {
-		return new ResourceLocation(Sennaton_Additions.MODID, "textures/entity/nyna/haunted_dice.png");
+		return new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/nyna/haunted_dice.png");
 	}
 
 	@Override
 	public ResourceLocation getAnimationResource(HauntedDiceEntity animatable) {
-		return new ResourceLocation(Sennaton_Additions.MODID, "animations/dice.animation.json");
+		return new ResourceLocation(Sennaton_Additions_Client.MODID, "animations/dice.animation.json");
 	}
 
 	@Override

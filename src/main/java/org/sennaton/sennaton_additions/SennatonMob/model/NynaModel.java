@@ -3,20 +3,20 @@ package org.sennaton.sennaton_additions.SennatonMob.model;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import org.sennaton.sennaton_additions.SennatonMob.NynaEntity;
-import org.sennaton.sennaton_additions.Sennaton_Additions;
+import org.sennaton.sennaton_additions.Sennaton_Additions_Client;
 import software.bernie.geckolib.constant.DataTickets;
 import software.bernie.geckolib.core.animatable.model.CoreGeoBone;
 import software.bernie.geckolib.core.animation.AnimationState;
 import software.bernie.geckolib.model.GeoModel;
 import software.bernie.geckolib.model.data.EntityModelData;
 
-import static org.sennaton.sennaton_additions.client.renderer.NynaRenderer.LOCATION_BY_VARIANT;
+import static org.sennaton.sennaton_additions.SennatonMob.NynaRenderer.LOCATION_BY_VARIANT;
 
 
 public class NynaModel extends GeoModel<NynaEntity> {
 	@Override
 	public ResourceLocation getModelResource(NynaEntity animatable) {
-		return new ResourceLocation(Sennaton_Additions.MODID, "geo/nyna.geo.json");
+		return new ResourceLocation(Sennaton_Additions_Client.MODID, "geo/nyna.geo.json");
 	}
 
 	@Override
@@ -26,7 +26,7 @@ public class NynaModel extends GeoModel<NynaEntity> {
 
 	@Override
 	public ResourceLocation getAnimationResource(NynaEntity animatable) {
-		return new ResourceLocation(Sennaton_Additions.MODID, "animations/nyna.animation.json");
+		return new ResourceLocation(Sennaton_Additions_Client.MODID, "animations/nyna.animation.json");
 	}
 
 	@Override

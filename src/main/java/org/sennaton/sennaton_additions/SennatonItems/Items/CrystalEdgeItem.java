@@ -1,12 +1,8 @@
 package org.sennaton.sennaton_additions.SennatonItems.Items;
 
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraftforge.eventbus.api.IEventBus;
+//import net.minecraftforge.eventbus.api.IEventBus;
 
 public class CrystalEdgeItem extends SwordItem {
     public CrystalEdgeItem() {
@@ -37,15 +33,15 @@ public class CrystalEdgeItem extends SwordItem {
         }, 3, -2f, new Item.Properties().fireResistant());
     }
 
-    public static void register(IEventBus modEventBus) {
-    }
+    //public static void register(IEventBus modEventBus) {
+    //}
 
-    @Override
+    //@Override
     public boolean hasCraftingRemainingItem(ItemStack stack) {
         return true;
     }
 
-    @Override
+    //@Override
     public ItemStack getCraftingRemainingItem(ItemStack itemstack) {
         ItemStack retval = new ItemStack(this);
         retval.setDamageValue(itemstack.getDamageValue() + 1);
@@ -55,7 +51,7 @@ public class CrystalEdgeItem extends SwordItem {
         return retval;
     }
 
-    @Override
+    //@Override
     public boolean isRepairable(ItemStack itemstack) {
         return false;
     }

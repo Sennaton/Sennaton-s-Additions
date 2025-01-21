@@ -1,5 +1,5 @@
 
-package org.sennaton.sennaton_additions.world.teleporter;
+/*package org.sennaton.sennaton_additions.world.teleporter;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -229,3 +229,4 @@ public class FloatingPortalShape {
 		}
 	}
 }
+*/

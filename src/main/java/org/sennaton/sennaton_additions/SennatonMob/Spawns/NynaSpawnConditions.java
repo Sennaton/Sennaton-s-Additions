@@ -1,24 +1,17 @@
 package org.sennaton.sennaton_additions.SennatonMob.Spawns;
 
-import com.sun.jna.WString;
-import net.minecraft.data.tags.BiomeTagsProvider;
-import net.minecraft.data.worldgen.biome.EndBiomes;
-import net.minecraft.data.worldgen.biome.NetherBiomes;
-import net.minecraft.tags.BiomeTags;
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.tags.BiomeTags;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.biome.Biome.Precipitation;
-import net.minecraft.world.level.biome.Biomes;
-import net.minecraftforge.common.Tags;
-import net.minecraft.data.worldgen.biome.BiomeData;
-import org.sennaton.sennaton_additions.Sennaton_Additions;
-import org.sennaton.sennaton_additions.Tags.CoolNether;
 
-import java.lang.reflect.Field;
 import java.util.Random;
-
-import static com.ibm.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
 public class NynaSpawnConditions {
 	static Biome.Precipitation Precipitation;
@@ -65,8 +58,8 @@ public class NynaSpawnConditions {
 
 
 
-	public static boolean ShouldSpawn(LevelAccessor world, double x, double y, double z){
-		if (isNether(world, x, y, z) || isDark(world, x, y, z) || isEnd(world, x, y, z)){
+	public static boolean ShouldSpawn(EntityType<? extends LivingEntity> Nyna, ServerLevelAccessor world, MobSpawnType spawnType, BlockPos pos, RandomSource random){
+		if (isNether(world, pos.getX(), pos.getY(), pos.getZ()) || isDark(world, pos.getX(), pos.getY(), pos.getZ()) || isEnd(world, pos.getX(), pos.getY(), pos.getZ())){
 			return true;
 		} else {
 			return (random.nextInt(100) > 75);

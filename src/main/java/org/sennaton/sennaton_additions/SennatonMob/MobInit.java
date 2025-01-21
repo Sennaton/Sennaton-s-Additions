@@ -1,17 +1,20 @@
 package org.sennaton.sennaton_additions.SennatonMob;
 
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.RegistryObject;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
+//import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
+//import net.minecraft.world.entity.EntityType.Builder.*;
 
-import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.entity.EntityType;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
+import net.minecraftforge.eventbus.EventBus;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 import org.sennaton.sennaton_additions.SennatonMob.Dice.*;
 import org.sennaton.sennaton_additions.Sennaton_Additions;
 
@@ -20,9 +23,7 @@ import org.sennaton.sennaton_additions.Sennaton_Additions;
 public class MobInit {
     public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, Sennaton_Additions.MODID);
     public static final RegistryObject<EntityType<NynaEntity>> NYNA = register("nyna",
-            EntityType.Builder.<NynaEntity>of(NynaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NynaEntity::new)
-
-                    .sized(0.6f, 1.8f));
+            EntityType.Builder.<NynaEntity>of(NynaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NynaEntity::new).sized(0.6f, 1.8f));
 
     public static final RegistryObject<EntityType<DiceEntity>> DICE = register("dice",
             EntityType.Builder.<DiceEntity>of(DiceEntity::new, MobCategory.MISC).setCustomClientFactory(DiceEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
@@ -39,10 +40,22 @@ public class MobInit {
         return REGISTRY.register(registryname, () -> entityTypeBuilder.build(registryname));
     }
 
+    public static void initiate(IEventBus bus) {
+    REGISTRY.register(bus);
+    }
+
+    private static <T extends Entity> void register(String name, EntityType built) {
+        ForgeRegistries.ENTITY_TYPES.register(new ResourceLocation("sennaton_additions:" + name) , built);
+    }
+
+    public static <T extends Entity> EntityType get(RegistryObject<EntityType<T>> entity){
+        return entity.get();
+    }
+
 
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event) {
-        event.put(NYNA.get(), NynaEntity.createAttributes().build());
+        event.put(get(NYNA), NynaEntity.createAttributes().build());
 
     }
 

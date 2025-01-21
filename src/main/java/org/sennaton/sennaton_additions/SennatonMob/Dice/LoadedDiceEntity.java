@@ -7,46 +7,29 @@ import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
-
-import org.sennaton.sennaton_additions.Sennaton_Additions;
-import software.bernie.geckolib.animatable.GeoEntity;
-import software.bernie.geckolib.util.GeckoLibUtil;
-
-import software.bernie.geckolib.core.object.PlayState;
-import net.minecraft.world.level.block.Blocks;
-import software.bernie.geckolib.core.animation.RawAnimation;
-import net.minecraft.world.level.Level;
-import software.bernie.geckolib.core.animation.AnimationState;
-import net.minecraft.world.item.ItemStack;
-import software.bernie.geckolib.core.animation.AnimationController;
-import net.minecraft.world.entity.projectile.ItemSupplier;
-import software.bernie.geckolib.core.animation.AnimatableManager;
 import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.registries.RegistryObject;
+import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.util.RandomSource;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.protocol.game.ClientGamePacketListener;
-import net.minecraft.network.protocol.Packet;
-
-import org.sennaton.sennaton_additions.SennatonMob.MobInit;
-import software.bernie.geckolib.core.animatable.GeoAnimatable;
+import software.bernie.geckolib.core.animation.AnimatableManager;
+import software.bernie.geckolib.core.animation.AnimationController;
+import software.bernie.geckolib.core.animation.AnimationState;
+import software.bernie.geckolib.core.animation.RawAnimation;
+import software.bernie.geckolib.core.object.PlayState;
+import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.Collection;
 
 
-@OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
+//@OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class LoadedDiceEntity extends AbstractArrow implements GeoEntity {
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(LoadedDiceEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(LoadedDiceEntity.class, EntityDataSerializers.STRING);
@@ -55,6 +38,7 @@ public class LoadedDiceEntity extends AbstractArrow implements GeoEntity {
 	protected Collection<Entity> piercedAndKilledEntities;
 	protected SoundEvent soundEvent;
 	public String animationprocedure = "empty";
+	public int shoottimer;
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.BARRIER);
 	/*private static final EntityDataAccessor<String> DATA_ID_TYPE_VARIANT =
 			SynchedEntityData.defineId(LoadedDiceEntity.class, EntityDataSerializers.STRING);
@@ -62,10 +46,10 @@ public class LoadedDiceEntity extends AbstractArrow implements GeoEntity {
 	//public String variantP = DATA_ID_TYPE_VARIANT.toString();
 
 	/*public LoadedDiceEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(MobInit.LOADED_DICE.get(), world);
+		super(MobInit.LOADED_DICE, world);
 	}*/
 
-	public LoadedDiceEntity(EntityType<? extends LoadedDiceEntity> type, Level world) {
+	public LoadedDiceEntity(EntityType type, Level world) {
 		super(type, world);
 	}
 
@@ -99,14 +83,14 @@ public class LoadedDiceEntity extends AbstractArrow implements GeoEntity {
 		//this.entityData.set(DATA_ID_TYPE_VARIANT, tag.getInt("Variant"));
 	}
 */
-	public LoadedDiceEntity(EntityType<? extends LoadedDiceEntity> type, LivingEntity entity, Level world) {
+	public LoadedDiceEntity(EntityType type, LivingEntity entity, Level world) {
 		super(type, entity, world);
 	}
 
-	@Override
-	public Packet<ClientGamePacketListener> getAddEntityPacket() {
-		return NetworkHooks.getEntitySpawningPacket(this);
-	}
+	//@Override
+	//public Packet<ClientGamePacketListener> getAddEntityPacket() {
+	//	return NetworkHooks.getEntitySpawningPacket(this);
+	//}
 
 
 
@@ -125,6 +109,7 @@ public class LoadedDiceEntity extends AbstractArrow implements GeoEntity {
 	@Override
 	public void tick() {
 		super.tick();
+		shoottimer -=1;
 		if (this.inGround)
 			this.discard();
 	}

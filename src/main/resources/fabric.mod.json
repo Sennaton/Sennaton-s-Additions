@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "sennaton_additions",
+  "version": "1.0 Fabric",
+
+
+  "entrypoints": {
+    "main": [
+      "org.sennaton.sennaton_additions.Sennaton_Additions"
+    ],
+    "client": [
+      "org.sennaton.sennaton_additions.Sennaton_Additions_Client"
+    ]
+  },
+  "mixins": [
+    "sennaton_additions.mixins.json",
+    {
+      "config": "sennaton_additions_client.mixins.json",
+      "environment": "client"
+    }
+  ]
+}

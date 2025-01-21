@@ -1,37 +1,33 @@
 package org.sennaton.sennaton_additions.Sound;
 
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.world.entity.ai.goal.BreedGoal;
-import net.minecraftforge.common.util.ForgeSoundType;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
 import org.sennaton.sennaton_additions.Sennaton_Additions;
 
 public class Sound {
-    public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
-            DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, Sennaton_Additions.MODID);
+    //public static final DeferredRegister<SoundEvent SOUND_EVENTS =
+    //        DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, Sennaton_Additions.MODID);
 
-    public static final RegistryObject<SoundEvent> NYNA_MEW = registerSoundEvent("nyna_mew");
-    public static final RegistryObject<SoundEvent> NYNA_HURT = registerSoundEvent( "nyna_hurt");
-    public static final RegistryObject<SoundEvent> NYNA_DEATH = registerSoundEvent( "nyna_death");
-    public static final RegistryObject<SoundEvent> NYNA_UN_MEW = registerSoundEvent("nyna_un_mew");
-    public static final RegistryObject<SoundEvent> NYNA_UN_HURT = registerSoundEvent( "nyna_un_hurt");
-    public static final RegistryObject<SoundEvent> NYNA_UN_DEATH = registerSoundEvent( "nyna_un_death");
-    public static final RegistryObject<SoundEvent> NYNA_MEWS = registerSoundEvent("nyna_mews");
-    public static final RegistryObject<SoundEvent> NYNA_HURTS = registerSoundEvent( "nyna_hurts");
-    public static final RegistryObject<SoundEvent> NYNA_DEATHS = registerSoundEvent( "nyna_deaths");
+    public static void initiate() {
+        registerSoundEvent("nyna_mew");
+        registerSoundEvent("nyna_hurt");
+        registerSoundEvent("nyna_death");
+        registerSoundEvent("nyna_un_mew");
+        registerSoundEvent("nyna_un_hurt");
+        registerSoundEvent("nyna_un_death");
+        registerSoundEvent("nyna_mews");
+        registerSoundEvent("nyna_hurts");
+        registerSoundEvent("nyna_deaths");
+    }
 
-
-    private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
+    private static SoundEvent registerSoundEvent(String name) {
         ResourceLocation id = new ResourceLocation(Sennaton_Additions.MODID, name);
-    return SOUND_EVENTS.register(name, ()-> SoundEvent.createVariableRangeEvent(id));
+        return Registry.register(BuiltInRegistries.SOUND_EVENT,id,SoundEvent.createVariableRangeEvent(id));//(name, ()-> SoundEvent.createVariableRangeEvent(id););
     }
 
-    public static void register(IEventBus eventBus) {
-    SOUND_EVENTS.register(eventBus);
-    }
+    //public static void register(IEventBus eventBus) {
+    //SOUND_EVENTS.register(eventBus);
+    //}
 }

@@ -1,49 +1,45 @@
 package org.sennaton.sennaton_additions.SennatonMob;
 
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.RegistryObject;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
+//import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
+//import net.minecraft.world.entity.EntityType.Builder.*;
 
-import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.entity.EntityType;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
 import org.sennaton.sennaton_additions.SennatonMob.Dice.*;
-import org.sennaton.sennaton_additions.Sennaton_Additions;
 
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+//@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class MobInit {
-    public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, Sennaton_Additions.MODID);
-    public static final RegistryObject<EntityType<NynaEntity>> NYNA = register("nyna",
-            EntityType.Builder.<NynaEntity>of(NynaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NynaEntity::new)
+    public static final EntityType<NynaEntity> NYNA = EntityType.Builder.<NynaEntity>of(NynaEntity::new, MobCategory.MONSTER)/*.sized(0.6f, 1.8f)*/.build("nyna");//.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NynaEntity::new)
+    public static final EntityType<DiceEntity> DICE = EntityType.Builder.<DiceEntity>of(DiceEntity::new, MobCategory.MISC).sized(0.5f, 0.5f).build("dice");//.setCustomClientFactory(DiceEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+    public static final EntityType<FrozenDiceEntity> FROZEN_DICE = EntityType.Builder.<FrozenDiceEntity>of(FrozenDiceEntity::new, MobCategory.MISC).sized(0.5f, 0.5f).build("frozen_dice");
+    public static final EntityType<WarpedDiceEntity> WARPED_DICE = EntityType.Builder.<WarpedDiceEntity>of(WarpedDiceEntity::new, MobCategory.MISC).sized(0.5f, 0.5f).build("warped_dice");
+    public static final EntityType<BurningDiceEntity> BURNING_DICE = EntityType.Builder.<BurningDiceEntity>of(BurningDiceEntity::new, MobCategory.MISC).sized(0.5f, 0.5f).build("burning_dice");
+    public static final EntityType<HauntedDiceEntity> HAUNTED_DICE = EntityType.Builder.<HauntedDiceEntity>of(HauntedDiceEntity::new, MobCategory.MISC).sized(0.5f, 0.5f).build("haunted_dice");
 
-                    .sized(0.6f, 1.8f));
 
-    public static final RegistryObject<EntityType<DiceEntity>> DICE = register("dice",
-            EntityType.Builder.<DiceEntity>of(DiceEntity::new, MobCategory.MISC).setCustomClientFactory(DiceEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-    public static final RegistryObject<EntityType<FrozenDiceEntity>> FROZEN_DICE = register("frozen_dice",
-            EntityType.Builder.<FrozenDiceEntity>of(FrozenDiceEntity::new, MobCategory.MISC).setCustomClientFactory(FrozenDiceEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-    public static final RegistryObject<EntityType<WarpedDiceEntity>> WARPED_DICE = register("warped_dice",
-            EntityType.Builder.<WarpedDiceEntity>of(WarpedDiceEntity::new, MobCategory.MISC).setCustomClientFactory(WarpedDiceEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-    public static final RegistryObject<EntityType<BurningDiceEntity>> BURNING_DICE = register("burning_dice",
-            EntityType.Builder.<BurningDiceEntity>of(BurningDiceEntity::new, MobCategory.MISC).setCustomClientFactory(BurningDiceEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-    public static final RegistryObject<EntityType<HauntedDiceEntity>> HAUNTED_DICE = register("haunted_dice",
-            EntityType.Builder.<HauntedDiceEntity>of(HauntedDiceEntity::new, MobCategory.MISC).setCustomClientFactory(HauntedDiceEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+    public static void initiate() {
+        register("nyna", NYNA);
+        register("dice", DICE);
+        register("frozen_dice", FROZEN_DICE);
+        register("warped_dice", WARPED_DICE);
+        register("burning_dice", BURNING_DICE);
+        register("haunted_dice", HAUNTED_DICE);
+    }
 
-    private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
-        return REGISTRY.register(registryname, () -> entityTypeBuilder.build(registryname));
+    private static <T extends Entity> EntityType<T> register(String name, EntityType built) {
+        return Registry.register(BuiltInRegistries.ENTITY_TYPE, new ResourceLocation("sennaton_additions:" + name) , built);
     }
 
 
-    @SubscribeEvent
-    public static void registerAttributes(EntityAttributeCreationEvent event) {
-        event.put(NYNA.get(), NynaEntity.createAttributes().build());
+    //@SubscribeEvent
+    //public static void registerAttributes(EntityAttributeCreationEvent event) {
+        //event.put(NYNA, NynaEntity.createAttributes().build());
 
-    }
+    //}
 
 }

@@ -20,7 +20,7 @@ public class SennatonBlocks {
 
     public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, Sennaton_Additions.MODID);
     //public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, Sennaton_Additions.MODID);
-    public static final RegistryObject<CustomPortalBlock> floatingPortal = REGISTRY.register("floating_portal", FloatingPortalBlock::new);
+    public static final RegistryObject<CustomPortalBlock> floatingPortal = REGISTRY.register("floating_portal", ()-> new FloatingPortalBlock(BlockBehaviour.Properties.of()));
     //public static void initiate(){
     //register("floating_portal", floatingPortal);
     //}

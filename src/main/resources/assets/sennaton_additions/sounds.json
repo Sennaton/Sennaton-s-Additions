@@ -1,0 +1,39 @@
+{
+  "nyna_mew": {
+    "subtitle": "nyna.mew",
+    "sounds": ["sennaton_additions:nyna_mew"]
+  },
+  "nyna_hurt": {
+    "subtitle": "nyna.hurt",
+    "sounds": ["sennaton_additions:nyna_hurt"]
+  },
+  "nyna_death": {
+    "subtitle:": "nyna.death",
+    "sounds":["sennaton_additions:nyna_death"]
+  },
+  "nyna_un_mew": {
+    "subtitle": "nyna.un_mew",
+    "sounds": ["sennaton_additions:nyna_un_mew"]
+},
+  "nyna_un_hurt": {
+    "subtitle": "nyna.un_hurt",
+    "sounds": ["sennaton_additions:nyna_un_hurt"]
+  },
+  "nyna_un_death": {
+    "subtitle:": "nyna.un_death",
+    "sounds":["sennaton_additions:nyna_un_death"]
+  },
+  "nyna_mews": {
+    "subtitle": "nyna.mews",
+    "sounds": ["sennaton_additions:nyna_mews"]
+  },
+  "nyna_hurts": {
+    "subtitle": "nyna.hurts",
+    "sounds": ["sennaton_additions:nyna_hurts"]
+  },
+  "nyna_deaths": {
+    "subtitle:": "nyna.deaths",
+    "sounds":["sennaton_additions:nyna_deaths"]
+  }
+
+}

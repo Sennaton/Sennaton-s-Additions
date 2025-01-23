@@ -43,16 +43,8 @@ import static net.minecraft.world.item.CreativeModeTabs.*;
 //@Mod.EventBusSubscriber
 public class Sennaton_Additions /*implements ModInitializer*/ {
 
-    // Define mod id in a common place for everything to reference
     public static final String MODID = "sennaton_additions";
-    // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
-    // Create a Deferred Register to hold Blocks which will all be registered under the "sennaton_additions" namespace
-    //public static final Block BLOCKS = Registries.create(ForgeRegistries.BLOCKS, MODID);
-    // Create a Deferred Register to hold Items which will all be registered under the "sennaton_additions" namespace
-    //public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
-    // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "examplemod" namespace
-    //public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
     public static DeferredRegister<Block> PORTALBLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
 
     public static RegistryObject<CustomPortalBlock> PORTAL_BLOCK = PORTALBLOCKS.register("floating_portal", () -> new CustomPortalBlock(BlockBehaviour.Properties.of().noCollission().randomTicks().pushReaction(PushReaction.BLOCK).strength(-1.0F).sound(SoundType.GLASS).lightLevel(s -> 11).noLootTable()));

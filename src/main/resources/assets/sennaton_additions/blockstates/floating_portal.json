@@ -5,6 +5,9 @@
     },
     "axis=x": {
       "model": "sennaton_additions:block/floating_portal_ns"
+    },
+    "axis=y": {
+      "model": "sennaton_additions:block/floating_portal_ns"
     }
   }
 }

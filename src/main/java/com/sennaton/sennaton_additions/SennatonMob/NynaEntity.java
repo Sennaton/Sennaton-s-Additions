@@ -2,7 +2,10 @@
 package com.sennaton.sennaton_additions.SennatonMob;
 
 import com.mojang.logging.LogUtils;
+import com.sennaton.sennaton_additions.CreativeTabHelper;
 import com.sennaton.sennaton_additions.SennatonMob.Dice.*;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -10,9 +13,7 @@ import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.tags.DamageTypeTags;
-import net.minecraft.tags.EntityTypeTags;
-import net.minecraft.tags.FluidTags;
+import net.minecraft.tags.*;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.DifficultyInstance;
@@ -38,7 +39,9 @@ import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.network.PlayMessages;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -50,20 +53,23 @@ import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache
 import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
+import java.lang.reflect.Array;
 import java.time.LocalDate;
 import java.time.temporal.ChronoField;
 import java.util.*;
+import java.util.stream.Collectors;
 
 //import static java.lang.VersionProps.print;
 import static com.sennaton.sennaton_additions.SennatonMob.Spawns.NynaSpawnConditions.BiomeType;
 
 
 public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEntity {
+	AttributeMap attributes = new AttributeMap(NynaEntity.createAttributes().build());
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(NynaEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(NynaEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(NynaEntity.class, EntityDataSerializers.STRING);
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
-	private AttributeMap attributes;
+	//private AttributeMap attributes;
 	private boolean swinging;
 	private boolean lastloop;
 	private long lastSwing;
@@ -91,6 +97,7 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 
 	public NynaVariant variant;
 
+
 	public GroundPathNavigation nav = new GroundPathNavigation(this, (Level) this.level());;
 	public WaterBoundPathNavigation nav2 = new WaterBoundPathNavigation(this, (Level) this.level());;
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor p_34297_, DifficultyInstance p_34298_, MobSpawnType p_34299_, @Nullable SpawnGroupData p_34300_, @Nullable CompoundTag p_34301_) {
@@ -103,13 +110,13 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 		boolean warped = (randomsource.nextInt(100)>75);
 		boolean isDark = NynaSpawnConditions.isDark( p_34297_,this.getX(),  this.getY(),  this.getZ());
 		switch (BiomeType(p_34297_,this.getX(),  this.getY(),  this.getZ())){
-            case "Overworld" -> {
-                if (warped || !isDark){
-                    this.setVariant(NynaVariant.UN_NYNA);}
-                else {
-                    this.setVariant(NynaVariant.NYNA);}
-            }
-            case "Cold/Ocean" ->{
+			case "Overworld" -> {
+				if (warped || !isDark){
+					this.setVariant(NynaVariant.UN_NYNA);}
+				else {
+					this.setVariant(NynaVariant.NYNA);}
+			}
+			case "Cold/Ocean" ->{
 				if (warped || !isDark){
 					this.setVariant(NynaVariant.UN_NYNA);}
 				else {
@@ -121,7 +128,7 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 					this.setVariant(NynaVariant.FIREY_NYNA);
 			case "Haunting" ->
 					this.setVariant(NynaVariant.HAUNTED_NYNA);
-			}
+		}
 		nav.setCanOpenDoors(true);
 		nav.setCanPassDoors(true);
 		this.navigation = nav;
@@ -617,7 +624,7 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 
 
 	public static AttributeSupplier.Builder createAttributes() {
-		AttributeSupplier.Builder builder = LivingEntity.createLivingAttributes();
+		//AttributeSupplier.Builder builder = LivingEntity.createLivingAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 20);
 		builder = builder.add(Attributes.ARMOR, 0);

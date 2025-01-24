@@ -624,7 +624,7 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 
 
 	public static AttributeSupplier.Builder createAttributes() {
-		//AttributeSupplier.Builder builder = LivingEntity.createLivingAttributes();
+		AttributeSupplier.Builder builder = LivingEntity.createLivingAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 20);
 		builder = builder.add(Attributes.ARMOR, 0);

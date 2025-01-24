@@ -5,7 +5,7 @@ import com.sennaton.sennaton_additions.SennatonMob.dice.*;
 import net.fabricmc.api.ClientModInitializer;
 import net.minecraft.client.renderer.RenderType;
 import com.sennaton.sennaton_additions.SennatonBlocks.SennatonBlocks;
-import org.sennaton.sennaton_additions.SennatonMob.dice.*;
+import com.sennaton.sennaton_additions.SennatonMob.dice.*;
 import com.sennaton.sennaton_additions.SennatonMob.MobInit;
 import com.sennaton.sennaton_additions.SennatonMob.NynaRenderer;
 import org.slf4j.Logger;

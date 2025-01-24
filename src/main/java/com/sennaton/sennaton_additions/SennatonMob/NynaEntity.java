@@ -41,7 +41,7 @@ import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.Blocks;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.sennaton.sennaton_additions.SennatonMob.Dice.*;
+import com.sennaton.sennaton_additions.SennatonMob.Dice.*;
 import com.sennaton.sennaton_additions.SennatonMob.Spawns.NynaSpawnConditions;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.constant.DefaultAnimations;
@@ -58,13 +58,13 @@ import static com.sennaton.sennaton_additions.SennatonMob.Spawns.NynaSpawnCondit
 
 
 public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEntity {
-	AttributeMap attributes = new AttributeMap(NynaEntity.createAttributes().build());
+	//AttributeMap attributes = new AttributeMap(NynaEntity.createAttributes().build());
 
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(NynaEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(NynaEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(NynaEntity.class, EntityDataSerializers.STRING);
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
-	//private AttributeMap attributes;
+	private AttributeMap attributes;
 	private boolean swinging;
 	private boolean lastloop;
 	private long lastSwing;
@@ -612,6 +612,7 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 	public HumanoidArm getMainArm() {
 		return HumanoidArm.RIGHT;
 	}
+
 
 
 	public static AttributeSupplier.Builder createAttributes() {

@@ -1,9 +1,11 @@
 package com.sennaton.sennaton_additions;
 
 import com.mojang.logging.LogUtils;
+import com.sennaton.sennaton_additions.SennatonMob.NynaEntity;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.kyrptonaught.customportalapi.CustomPortalBlock;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -42,6 +44,7 @@ public class Sennaton_Additions implements ModInitializer {
         SennatonBlocks.initiate();
         MobInit.initiate();
         Sound.initiate();
+        FabricDefaultAttributeRegistry.register(MobInit.NYNA, NynaEntity.createAttributes());
         creativeModeTabsLoad();
         load();
     }

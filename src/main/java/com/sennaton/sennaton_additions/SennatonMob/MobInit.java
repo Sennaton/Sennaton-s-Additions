@@ -10,7 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
-import org.sennaton.sennaton_additions.SennatonMob.Dice.*;
+import com.sennaton.sennaton_additions.SennatonMob.Dice.*;
 
 
 //@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)

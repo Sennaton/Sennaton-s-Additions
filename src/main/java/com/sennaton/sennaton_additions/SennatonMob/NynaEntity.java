@@ -64,7 +64,7 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(NynaEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(NynaEntity.class, EntityDataSerializers.STRING);
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
-	private AttributeMap attributes;
+	//private AttributeMap attributes;
 	private boolean swinging;
 	private boolean lastloop;
 	private long lastSwing;
@@ -204,14 +204,6 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 		levelAccess = world;
 		//registerGoals();
 		//BuiltInRegistries.
-	}
-
-	@Override
-	public @NotNull AttributeMap getAttributes() {
-		if (this.attributes == null){
-			this.attributes = new AttributeMap(NynaEntity.createAttributes().build());   //.put((EntityType)MobInit.NYNA, (AttributeSupplier)NynaEntity.createAttributes().build()).build();
-		}
-		return this.attributes;
 	}
 
 

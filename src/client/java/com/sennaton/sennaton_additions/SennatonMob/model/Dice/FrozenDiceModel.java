@@ -18,7 +18,7 @@ public class FrozenDiceModel extends GeoModel<FrozenDiceEntity> {
 
 	@Override
 	public ResourceLocation getTextureResource(FrozenDiceEntity animatable) {
-		return new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/nyna/frozen_dice.png");
+		return new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/frozen_dice.png");
 	}
 
 	@Override

@@ -18,7 +18,7 @@ public class WarpedDiceModel extends GeoModel<WarpedDiceEntity> {
 
 	@Override
 	public ResourceLocation getTextureResource(WarpedDiceEntity animatable) {
-		return new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/nyna/warped_dice.png");
+		return new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/warped_dice.png");
 	}
 
 	@Override

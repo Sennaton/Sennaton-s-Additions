@@ -16,12 +16,12 @@ public class DiceRenderer extends GeoEntityRenderer<DiceEntity> {
 
 	public DiceRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new DiceModel());
-		addRenderLayer(new GlowLayerDice(this, new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/nyna/dice.png")));
+		addRenderLayer(new GlowLayerDice(this, new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/dice.png")));
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(DiceEntity animatable) {
-		return new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/nyna/dice.png");
+		return new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/dice.png");
 	}
 
 	@Override

@@ -42,15 +42,15 @@ public class NynaRenderer extends GeoEntityRenderer<NynaEntity> {
 	public static final Map<NynaVariant, ResourceLocation> LOCATION_BY_VARIANT =
 			Util.make(Maps.newEnumMap(NynaVariant.class), (p_114874_) -> {
 				p_114874_.put(NynaVariant.NYNA,
-						new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/nyna/nyna.png"));
+						new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/nyna.png"));
 				p_114874_.put(NynaVariant.FRIGID_NYNA,
-						new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/nyna/frigid_nyna.png"));
+						new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/frigid_nyna.png"));
 				p_114874_.put(NynaVariant.UN_NYNA,
-						new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/nyna/un_nyna.png"));
+						new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/un_nyna.png"));
 				p_114874_.put(NynaVariant.FIREY_NYNA,
-						new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/nyna/firey_nyna.png"));
+						new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/firey_nyna.png"));
 				p_114874_.put(NynaVariant.HAUNTED_NYNA,
-						new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/nyna/haunted_nyna.png"));
+						new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/haunted_nyna.png"));
 
 			});
 

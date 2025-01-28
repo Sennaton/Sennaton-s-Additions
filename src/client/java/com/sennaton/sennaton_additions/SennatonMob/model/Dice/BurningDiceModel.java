@@ -18,7 +18,7 @@ public class BurningDiceModel extends GeoModel<BurningDiceEntity> {
 
 	@Override
 	public ResourceLocation getTextureResource(BurningDiceEntity animatable) {
-		return new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/nyna/burning_dice.png");
+		return new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/burning_dice.png");
 	}
 
 	@Override

@@ -16,12 +16,12 @@ public class WarpedDiceRenderer extends GeoEntityRenderer<WarpedDiceEntity> {
 
     public WarpedDiceRenderer(EntityRendererProvider.Context renderManager) {
         super(renderManager, new WarpedDiceModel());
-        addRenderLayer(new GlowLayerDice(this, new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/nyna/warped_dice.png")));
+        addRenderLayer(new GlowLayerDice(this, new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/warped_dice.png")));
     }
 
     @Override
     public ResourceLocation getTextureLocation(WarpedDiceEntity animatable) {
-        return new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/nyna/warped_dice.png");
+        return new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/warped_dice.png");
     }
 
     @Override

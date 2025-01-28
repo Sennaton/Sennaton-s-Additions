@@ -16,13 +16,13 @@ public class FrozenDiceRenderer extends GeoEntityRenderer<FrozenDiceEntity> {
 
     public FrozenDiceRenderer(EntityRendererProvider.Context renderManager) {
         super(renderManager, new FrozenDiceModel());
-        addRenderLayer(new GlowLayerDice(this, new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/nyna/frozen_dice.png")));
+        addRenderLayer(new GlowLayerDice(this, new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/frozen_dice.png")));
 
     }
 
     @Override
     public ResourceLocation getTextureLocation(FrozenDiceEntity animatable) {
-        return new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/nyna/frozen_dice.png");
+        return new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/frozen_dice.png");
 
     }
 

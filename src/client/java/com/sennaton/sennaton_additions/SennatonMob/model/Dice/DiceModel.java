@@ -18,7 +18,7 @@ public class DiceModel extends GeoModel<DiceEntity> {
 
 	@Override
 	public ResourceLocation getTextureResource(DiceEntity animatable) {
-		return new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/nyna/dice.png");
+		return new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/dice.png");
 	}
 
 	@Override

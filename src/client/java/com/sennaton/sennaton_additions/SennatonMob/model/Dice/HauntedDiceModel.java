@@ -18,7 +18,7 @@ public class HauntedDiceModel extends GeoModel<HauntedDiceEntity> {
 
 	@Override
 	public ResourceLocation getTextureResource(HauntedDiceEntity animatable) {
-		return new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/nyna/haunted_dice.png");
+		return new ResourceLocation(Sennaton_Additions_Client.MODID, "textures/entity/haunted_dice.png");
 	}
 
 	@Override

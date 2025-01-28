@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "id": "sennaton_additions",
   "version": "1.0 Fabric",
+  "name": "Sennaton's Additions",
 
 
   "entrypoints": {

@@ -1,0 +1,13 @@
+{
+  "variants" : {
+    "sennaton_additions:textures/entity/nyna/firey_nyna.png%MEDIUM" : "normal_sprite:burning_nyna",
+    "sennaton_additions:textures/entity/nyna/frigid_nyna.png%MEDIUM" : "normal_sprite:frigid_nyna",
+    "sennaton_additions:textures/entity/nyna/un_nyna.png%MEDIUM" : "normal_sprite:un_nyna",
+    "sennaton_additions:textures/entity/nyna/haunted_nyna.png%MEDIUM" : "normal_sprite:haunted_nyna",
+    "sennaton_additions:textures/entity/nyna/nyna.png%MEDIUM" : "normal_sprite:nyna",
+    "default" : "normal_sprite:nyna"
+  },
+
+  "variantMethod" : "xaero.common.minimap.render.radar.EntityIconDefinitions.getVariant"
+
+}

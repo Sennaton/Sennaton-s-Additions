@@ -74,7 +74,7 @@ public class Sennaton_Additions implements ModInitializer {
         LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
 
         SpawnPlacements.register(MobInit.NYNA, SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, NynaSpawnConditions::ShouldSpawn);
-        BiomeModifications.addSpawn(BiomeSelectors.foundInOverworld(), MobCategory.AMBIENT, MobInit.NYNA, 5, 1, 5);
+        BiomeModifications.addSpawn(BiomeSelectors.foundInOverworld(), MobCategory.MONSTER, MobInit.NYNA, 25, 1, 5);
         BiomeModifications.addSpawn(BiomeSelectors.foundInTheEnd(), MobCategory.MONSTER, MobInit.NYNA, 5, 1, 5);
         BiomeModifications.addSpawn(BiomeSelectors.foundInTheNether(), MobCategory.MONSTER, MobInit.NYNA, 25, 1, 1);
     }

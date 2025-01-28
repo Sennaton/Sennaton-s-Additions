@@ -305,7 +305,7 @@ public class NynaEntity extends PathfinderMob implements RangedAttackMob, GeoEnt
 					this.target = null;
 				}
 			}
-			LogUtils.getLogger().info("?");
+			//LogUtils.getLogger().info("?");
 		}
 
 		@Override

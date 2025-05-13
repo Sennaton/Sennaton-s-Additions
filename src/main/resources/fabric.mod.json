@@ -6,10 +6,10 @@
 
   "entrypoints": {
     "main": [
-      "org.sennaton.sennaton_additions.Sennaton_Additions"
+      "com.sennaton.sennaton_additions.Sennaton_Additions"
     ],
     "client": [
-      "org.sennaton.sennaton_additions.Sennaton_Additions_Client"
+      "com.sennaton.sennaton_additions.Sennaton_Additions_Client"
     ]
   },
   "mixins": [

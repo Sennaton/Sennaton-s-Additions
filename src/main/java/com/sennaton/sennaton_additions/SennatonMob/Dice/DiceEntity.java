@@ -40,7 +40,7 @@ public class DiceEntity extends LoadedDiceEntity {
 		return entityarrow;
 	}
 	public static DiceEntity shoot(Level world, LivingEntity entity, RandomSource source) {
-		return shoot(world, entity, source, 0.5f, 10, 2);
+		return shoot(world, entity, source, 0.5f, 5, 2);
 	}
 
 	public static DiceEntity shoot(LivingEntity entity, LivingEntity target, String variantP) {

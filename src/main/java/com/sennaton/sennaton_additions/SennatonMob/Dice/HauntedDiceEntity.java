@@ -43,7 +43,7 @@ public class HauntedDiceEntity extends LoadedDiceEntity {
         return entityarrow;
     }
     public static HauntedDiceEntity shoot(Level world, LivingEntity entity, RandomSource source) {
-        return shoot(world, entity, source, 0.5f, 10, 2);
+        return shoot(world, entity, source, 0.5f, 5, 2);
     }
 
     public static HauntedDiceEntity shoot(LivingEntity entity, LivingEntity target, String variantP) {

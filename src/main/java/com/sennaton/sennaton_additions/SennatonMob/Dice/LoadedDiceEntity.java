@@ -115,7 +115,7 @@ public class LoadedDiceEntity extends AbstractArrow implements GeoEntity {
 
 
 	public static boolean critTest(){
-		if ((random.nextInt(10) + 1) == 1){
+		if ((new Random().nextInt(10) + 1) == 1){
 			return true;
 		}
 		else {

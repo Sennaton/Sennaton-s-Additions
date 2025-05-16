@@ -59,7 +59,7 @@ public class HauntedDiceEntity extends LoadedDiceEntity {
         entityarrow.setSilent(true);
         entityarrow.setBaseDamage(10);
         entityarrow.setKnockback(2);
-        entityarrow.setCritArrow(if critTest());
+        entityarrow.setCritArrow(critTest());
         entity.level().addFreshEntity(entityarrow);
         entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), Objects.requireNonNull(BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.arrow.shoot"))), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
         return entityarrow;

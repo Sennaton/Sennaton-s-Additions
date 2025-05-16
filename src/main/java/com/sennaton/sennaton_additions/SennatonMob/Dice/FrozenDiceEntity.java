@@ -35,7 +35,7 @@ public class FrozenDiceEntity extends LoadedDiceEntity {
         FrozenDiceEntity entityarrow = new FrozenDiceEntity(MobInit.get(MobInit.FROZEN_DICE), entity, world);
         entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
         entityarrow.setSilent(true);
-        entityarrow.setCritArrow(true);
+        entityarrow.setCritArrow(if (random.nextInt(10) + 1) == 1);
         entityarrow.setBaseDamage(damage);
         entityarrow.setKnockback(knockback);
         world.addFreshEntity(entityarrow);
@@ -59,7 +59,7 @@ public class FrozenDiceEntity extends LoadedDiceEntity {
         entityarrow.setSilent(true);
         entityarrow.setBaseDamage(10);
         entityarrow.setKnockback(2);
-        entityarrow.setCritArrow(true);
+        entityarrow.setCritArrow(if (random.nextInt(10) + 1) == 1);
         entity.level().addFreshEntity(entityarrow);
         entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), Objects.requireNonNull(BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.arrow.shoot"))), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
         return entityarrow;

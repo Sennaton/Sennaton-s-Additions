@@ -35,7 +35,7 @@ public class HauntedDiceEntity extends LoadedDiceEntity {
         HauntedDiceEntity entityarrow = new HauntedDiceEntity(MobInit.get(MobInit.HAUNTED_DICE), entity, world);
         entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
         entityarrow.setSilent(true);
-        entityarrow.setCritArrow(if (random.nextInt(10) + 1) == 1);
+        entityarrow.setCritArrow((random.nextInt(10) + 1) == 1);
         entityarrow.setBaseDamage(damage);
         entityarrow.setKnockback(knockback);
         world.addFreshEntity(entityarrow);

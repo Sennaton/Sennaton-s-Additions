@@ -33,7 +33,7 @@ public class BurningDiceEntity extends LoadedDiceEntity {
         BurningDiceEntity entityarrow = new BurningDiceEntity(MobInit.get(MobInit.BURNING_DICE), entity, world);
         entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
         entityarrow.setSilent(true);
-        entityarrow.setCritArrow((random.nextInt(10) + 1) == 1);
+        entityarrow.setCritArrow(critTest());
         entityarrow.setBaseDamage(damage);
         entityarrow.setKnockback(knockback);
         world.addFreshEntity(entityarrow);
@@ -57,7 +57,7 @@ public class BurningDiceEntity extends LoadedDiceEntity {
         entityarrow.setSilent(true);
         entityarrow.setBaseDamage(10);
         entityarrow.setKnockback(2);
-        entityarrow.setCritArrow((random.nextInt(10) + 1) == 1);
+        entityarrow.setCritArrow(critTest());
         entity.level().addFreshEntity(entityarrow);
         entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), Objects.requireNonNull(BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.arrow.shoot"))), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
         return entityarrow;
